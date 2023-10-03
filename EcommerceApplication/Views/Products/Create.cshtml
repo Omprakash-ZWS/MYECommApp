@@ -1,0 +1,58 @@
+﻿@* @model EcommerceApplication.Models.ViewModel.ProductDto *@
+@model EcommerceApplication.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+@* @using (Html.BeginForm("Create","Category",FormMethod.Post, new{enctype = "multipart/form-data"})) *@
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @* Encty*@
+        <form asp-action="Create" method="post" enctype="multipart/form-data" asp-controller="Products">            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>         
+         
+            <div class="form-group">
+                <label asp-for="ProductDescription" class="control-label"></label>
+                <input asp-for="ProductDescription" class="form-control" />
+                <span asp-validation-for="ProductDescription" class="text-danger"></span>
+            </div>         
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            </br>
+            <div class="form-group">
+                <label asp-for="Images" class="control-label"></label>
+                <input type="file" asp-for="Images" id="imgfile" name="imgfile" class="btn btn-info" multiple/>
+                <span asp-validation-for="Images" class="text-danger"></span>
+            </div>
+            </br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+ </br>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

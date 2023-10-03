@@ -1,0 +1,294 @@
+﻿@* @model List<EcommerceApplication.Models.Product> *@
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<h2>Checkout</h2>
+
+<div>
+    <h4>Product</h4>
+
+
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+	
+	<!-- //header --> 	
+	<!-- card-page -->
+	<div class="card-page">
+		<div class="container"> 
+			<h3 class="w3ls-title w3ls-title1"> Add TO Cart Product & Checkout</h3>  
+
+			<div class="container">
+			<div class="row">
+			<div class="col-md-12 ftco-animate fadeInUp ftco-animated">
+			<div class="cart-list">
+
+
+				<table class="table">
+					<thead class="thead-primary">
+						<tr class="text-center">
+							<th></th>
+							<th>Final Total</th>
+							@* <th>Product Name</th>							
+							<th>Price</th>
+							<th>Qnty</th>
+							<th>Total</th> *@
+
+
+						</tr>
+
+					</thead>
+					<tbody>
+
+				
+						<tr >
+							<td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+
+											<td><h3>@ViewBag.FinalTotal</h3></td>
+											@* <td ><h3>@item.ProductName</h3></td>							
+							<td><h3>@item.Price</h3></td>
+							<td class="product-name">
+													<h3>
+														<button class="btn-quantity decrease" data-productid="@item.ProductId" data-price="@item.Price">-</button>
+														<span class="quantity">@item.proquantity</span>
+														<button class="btn-quantity increase" data-productid="@item.ProductId" data-price="@item.Price">+</button>
+													</h3>
+
+							</td>
+							<td class="product-name"><h3>@item.Category</h3></td> *@
+							<td>
+								<a class="btn btn-primary" asp-action="" asp-route-id="">Make Payment</a>
+
+							</td>
+						</tr>
+	@* } *@
+									
+					</tbody>
+				</table>
+
+
+			</div>
+			</div>
+			</div>
+			</div>
+
+
+
+
+
+			<div class="agile-card-top">
+				<div class="col-md-4 card-top-grids">
+					<h4>Save <span>$15</span></h4>
+					<i class="fa fa-camera" aria-hidden="true"></i>
+					<h5>on purchase of Electronics In Smart bazaar.com</h5>
+				</div>
+				<div class="col-md-4 card-top-grids">
+					<h4>Save <span>$5</span></h4>
+					<i class="fa fa-motorcycle" aria-hidden="true"></i>
+					<h5>on purchase of Smart bazaar Automotive </h5>
+				</div>
+				<div class="col-md-4 card-top-grids">
+					<h4>Save <span>$20</span></h4>
+					<i class="fa fa-users" aria-hidden="true"></i>
+					<h5>on purchase of Clothings Using Card</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="agile-card-text">
+				<h5>New User Account Offers</h5>
+				<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas faucibus ipsum et libero euismod iaculis. Integer consectetur congue laoreet. Morbi eget leo elementum, vulputate eros et, egestas diam. Nam egestas, quam id viverra congue, elit mi eleifend libero, eget vulputate ante lorem vel quam. Sed suscipit ligula eu mi bibendum, vel mollis enim finibus. Suspendisse vitae est tortor. Donec aliquet leo vitae ligula mattis, vitae auctor mi pellentesque. Integer eu dui accumsan, convallis neque id, malesuada urna. </p>
+				<h5>Special account openings</h5>
+				<p>Nulla sodales nulla et ipsum pharetra pharetra. Suspendisse potenti. Phasellus cursus vehicula lorem, nec dignissim orci cursus tempor. Suspendisse vel ullamcorper arcu. Mauris tellus augue, tristique ut varius ac, scelerisque ac urna. Mauris nibh ligula, cursus eu vehicula a, scelerisque a nunc. Mauris sit amet sem orci. Proin sit amet tortor non massa tincidunt faucibus. Sed a lacus a purus congue dignissim. Maecenas auctor urna et ullamcorper sagittis. Aenean semper, nisi sed vulputate euismod, justo odio dictum lorem, a mattis ipsum magna non quam.<br>  Maecenas faucibus ipsum et libero euismod iaculis. Integer consectetur congue laoreet. Morbi eget leo elementum, vulputate eros et, egestas diam. Nam egestas, quam id viverra congue, elit mi eleifend libero, eget vulputate ante lorem vel quam. Sed suscipit ligula eu mi bibendum, vel mollis enim finibus. Suspendisse vitae est tortor. Donec aliquet leo vitae ligula mattis, vitae auctor mi pellentesque. Integer eu dui accumsan, convallis neque id, malesuada urna. </p>
+			</div>
+		</div>
+	</div>
+	<!-- //card-page --> 
+	<!-- footer-top -->
+	<div class="w3agile-ftr-top">
+		<div class="container">
+			<div class="ftr-toprow">
+				<div class="col-md-4 ftr-top-grids">
+					<div class="ftr-top-left">
+						<i class="fa fa-truck" aria-hidden="true"></i>
+					</div> 
+					<div class="ftr-top-right">
+						<h4>FREE DELIVERY</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+					</div> 
+					<div class="clearfix"> </div>
+				</div> 
+				<div class="col-md-4 ftr-top-grids">
+					<div class="ftr-top-left">
+						<i class="fa fa-user" aria-hidden="true"></i>
+					</div> 
+					<div class="ftr-top-right">
+						<h4>CUSTOMER CARE</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+					</div> 
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-4 ftr-top-grids">
+					<div class="ftr-top-left">
+						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+					</div> 
+					<div class="ftr-top-right">
+						<h4>GOOD QUALITY</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+					</div>
+					<div class="clearfix"> </div>
+				</div> 
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer-top --> 
+	<!-- subscribe -->
+	<div class="subscribe"> 
+		<div class="container">
+			<div class="col-md-6 social-icons w3-agile-icons">
+				<h4>Keep in touch</h4>  
+				<ul>
+					<li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
+					<li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
+					<li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
+					<li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
+					<li><a href="#" class="fa fa-rss icon rss"> </a></li> 
+				</ul>
+				<ul class="apps"> 
+					<li><h4>Download Our app : </h4> </li>
+					<li><a href="#" class="fa fa-apple"></a></li>
+					<li><a href="#" class="fa fa-windows"></a></li>
+					<li><a href="#" class="fa fa-android"></a></li>
+				</ul>
+			</div> 
+			<div class="col-md-6 subscribe-right">
+				<h4>Sign up for email and get 25%off!</h4>  
+				<form action="#" method="post"> 
+					<input type="text" name="email" placeholder="Enter your Email..." required="">
+					<input type="submit" value="Subscribe">
+				</form>
+				<div class="clearfix"> </div> 
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //subscribe --> 
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-info w3-agileits-info">
+				<div class="col-md-4 address-left agileinfo">
+					<div class="footer-logo header-logo">
+						<h2><a href="index.html"><span>S</span>mart <i>Bazaar</i></a></h2>
+						<h6>Your stores. Your place.</h6>
+					</div>
+					<ul>
+						<li><i class="fa fa-map-marker"></i> 123 San Sebastian, New York City USA.</li>
+						<li><i class="fa fa-mobile"></i> 333 222 3333 </li>
+						<li><i class="fa fa-phone"></i> +222 11 4444 </li>
+						<li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@example.com</a></li>
+					</ul> 
+				</div>
+				<div class="col-md-8 address-right">
+					<div class="col-md-4 footer-grids">
+						<h3>Company</h3>
+						<ul>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="marketplace.html">Marketplace</a></li>  
+							<li><a href="values.html">Core Values</a></li>  
+							<li><a href="privacy.html">Privacy Policy</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 footer-grids">
+						<h3>Services</h3>
+						<ul>
+							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="login.html">Returns</a></li> 
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="sitemap.html">Site Map</a></li>
+							<li><a href="login.html">Order Status</a></li>
+						</ul> 
+					</div>
+					<div class="col-md-4 footer-grids">
+						<h3>Payment Methods</h3>
+						<ul>
+							<li><i class="fa fa-laptop" aria-hidden="true"></i> Net Banking</li>
+							<li><i class="fa fa-money" aria-hidden="true"></i> Cash On Delivery</li>
+							<li><i class="fa fa-pie-chart" aria-hidden="true"></i>EMI Conversion</li>
+							<li><i class="fa fa-gift" aria-hidden="true"></i> E-Gift Voucher</li>
+							<li><i class="fa fa-credit-card" aria-hidden="true"></i> Debit/Credit Card</li>
+						</ul>  
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->		
+	<div class="copy-right"> 
+		<div class="container">
+			<p>© 2016 Smart bazaar . All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>
+		</div>
+	</div> 
+	<!-- cart-js -->
+	<script src="~/js/minicart.js"></script>
+	<script>
+        w3ls.render();
+
+        w3ls.cart.on('w3sb_checkout', function (evt) {
+        	var items, len, i;
+
+        	if (this.subtotal() > 0) {
+        		items = this.items();
+
+        		for (i = 0, len = items.length; i < len; i++) {
+        			items[i].set('shipping', 0);
+        			items[i].set('shipping2', 0);
+        		}
+        	}
+        });
+
+
+			// <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+
+		<script>
+			$(document).ready(function () {
+				$('.btn-quantity').click(function () {
+					var productId = $(this).data('productid');
+					var quantityElement = $(this).siblings('.quantity');
+					var currentQuantity = parseInt(quantityElement.text());
+
+					if ($(this).hasClass('increase')) {
+						currentQuantity++;
+					} else {
+						if (currentQuantity > 0) {
+							currentQuantity--;
+						}
+					}
+
+					quantityElement.text(currentQuantity);
+					updateTotalPrice(productId, currentQuantity);
+				});
+
+
+				
+			});
+
+    </script>  
+	<!-- //cart-js -->	 
+	<!-- menu js aim -->
+	<script src="~/js/jquery.menu-aim.js"> </script>
+	<script src="~/js/main.js"></script> <!-- Resource jQuery -->
+	<!-- //menu js aim --> 
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="~/js/bootstrap.js"></script>
+</body>
+</html>

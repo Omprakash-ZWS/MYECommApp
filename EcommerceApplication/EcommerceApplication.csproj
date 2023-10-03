@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Content\**" />
+    <Content Remove="Content\**" />
+    <EmbeddedResource Remove="Content\**" />
+    <None Remove="Content\**" />
+  </ItemGroup>  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
+    <PackageReference Include="NewtonSoft.Json" Version="13.0.3" />
+  </ItemGroup>  <ItemGroup>
+  <None Include="wwwroot\js\bootstrap.js" />
+  <None Include="wwwroot\js\custom.js" />
+  <None Include="wwwroot\js\easing.js" />
+  <None Include="wwwroot\js\imagezoom.js" />
+  <None Include="wwwroot\js\jquery-2.2.3.min.js" />
+  <None Include="wwwroot\js\jquery-scrolltofixed-min.js" />
+  <None Include="wwwroot\js\jquery.classycountdown.js" />
+  <None Include="wwwroot\js\jquery.flexslider.js" />
+  <None Include="wwwroot\js\jquery.jscrollpane.min.js" />
+  <None Include="wwwroot\js\jquery.knob.js" />
+  <None Include="wwwroot\js\jquery.marquee.min.js" />
+  <None Include="wwwroot\js\jquery.menu-aim.js" />
+  <None Include="wwwroot\js\jquery.mousewheel.js" />
+  <None Include="wwwroot\js\jquery.throttle.js" />
+  <None Include="wwwroot\js\main.js" />
+  <None Include="wwwroot\js\minicart.js" />
+  <None Include="wwwroot\js\move-top.js" />
+  <None Include="wwwroot\js\owl.carousel.js" />
+  <None Include="wwwroot\js\site.js" />
+</ItemGroup>  <ItemGroup>
+  <Folder Include="wwwroot\product\images\" />
+</ItemGroup>
+
+
+</Project>
