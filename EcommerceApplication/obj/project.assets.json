@@ -11778,11 +11778,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\EcommerceApplication.csproj",
+      "projectUniqueName": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\EcommerceApplication.csproj",
       "projectName": "EcommerceApplication",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\EcommerceApplication.csproj",
+      "projectPath": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\EcommerceApplication.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\obj\\",
+      "outputPath": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

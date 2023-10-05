@@ -155,7 +155,19 @@ namespace EcommerceApplication.Controllers
 		//	return View(Product);
 		//}
 
+		// GET: UserController/Create
+		//public ActionResult Create()
+		//{
+		//    return View();
+		//}
 
+		// POST: HomeController/Create
+		//[]
+		[HttpPost]
+        public IActionResult Create([FromBody] Registration registration)
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()

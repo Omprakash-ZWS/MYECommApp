@@ -9,89 +9,93 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EcommerceApplication
 build_property.RootNamespace = EcommerceApplication
-build_property.ProjectDir = C:\Users\DELL\Desktop\E-CommereceMVCBackup\EcommerceApplication\
+build_property.ProjectDir = D:\WorkSpace\MYECommApp\MYECommApp\EcommerceApplication\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\DELL\Desktop\E-CommereceMVCBackup\EcommerceApplication
+build_property.MSBuildProjectDirectory = D:\WorkSpace\MYECommApp\MYECommApp\EcommerceApplication
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Categories/Create.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Categories/Delete.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Categories/Details.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Categories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Categories/Edit.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Categories/Index.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Home/CartProducts.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Home/CartProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0UHJvZHVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Home/Checkout.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Home/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Home/Index.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Home/Privacy.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Home/Product.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Home/Product.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Products/Create.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Products/Delete.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Products/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Products/Details.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Products/Edit.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Products/Index.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Shared/Error.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/_ViewImports.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/_ViewStart.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/E-CommereceMVCBackup/EcommerceApplication/Views/Shared/_Layout.cshtml]
+[D:/WorkSpace/MYECommApp/MYECommApp/EcommerceApplication/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-w09zl2fc0c

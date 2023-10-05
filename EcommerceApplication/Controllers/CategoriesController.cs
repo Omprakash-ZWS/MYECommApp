@@ -15,6 +15,9 @@ using EcommerceApplication.Service.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 using EcommerceApplication.Models.ViewModel;
+using AutoMapper.Features;
+using Humanizer;
+using System.Security.Policy;
 
 namespace EcommerceApplication.Controllers
 {
@@ -64,8 +67,8 @@ namespace EcommerceApplication.Controllers
 		// To protect from overposting attacks, enable the specific properties you want to bind to.
 		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 		[HttpPost]
-		[ValidateAntiForgeryToken]
-		
+		[ValidateAntiForgeryToken]// the AntiForgery token is a security feature used to prevent Cross-Site Request Forgery(CSRF) attacks.
+
 		public async Task<IActionResult> Create( CategoryDto categoryDto)
 		{
 			Category cat = new Category()
@@ -135,11 +138,11 @@ namespace EcommerceApplication.Controllers
             return View(category);
         }
 
-        // POST: Categories/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+		// POST: Categories/Edit/5
+		// To protect from overposting attacks, enable the specific properties you want to bind to.
+		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-		[ValidateAntiForgeryToken]
+		[ValidateAntiForgeryToken] // the AntiForgery token is a security feature used to prevent Cross-Site Request Forgery(CSRF) attacks.
 		public async Task<IActionResult> Edit(int id, [Bind("CategoryId,CategoryName,CreatedAt,colour,description")] CategoryDto category)
 		{
 		    if (id != category.CategoryId)
@@ -189,7 +192,7 @@ namespace EcommerceApplication.Controllers
 
 		// POST: Categories/Delete/5
 		[HttpPost, ActionName("Delete")]
-		[ValidateAntiForgeryToken]
+		[ValidateAntiForgeryToken] //the AntiForgery token is a security feature used to prevent Cross-Site Request Forgery (CSRF) attacks. 
 		public async Task<IActionResult> DeleteConfirmed(int id)
 		{
 

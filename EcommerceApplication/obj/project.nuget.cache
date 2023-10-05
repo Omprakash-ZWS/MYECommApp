@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WnSJ3gB+q3A+vyP87eTp3g5sLx/QJYdIiFAusL/XVaAo8UuH80vul2YSf9DKkDbdoS3Gf66oticFQMOJ56xndA==",
+  "dgSpecHash": "RK2unedX8QQ/UqBrchg/85Zs0EcGqUTbv2H5vRRTohvqzH9orWPr83mVyObhFyQF1jDdsSmaDBI6rDDpyZo0EQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\EcommerceApplication.csproj",
+  "projectFilePath": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\EcommerceApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

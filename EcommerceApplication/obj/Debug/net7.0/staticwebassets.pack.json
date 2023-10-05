@@ -1,695 +1,699 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\EcommerceApplication.bundle.scp.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\EcommerceApplication.bundle.scp.css",
       "PackagePath": "staticwebassets\\EcommerceApplication.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\css\\animate.min.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\css\\animate.min.css",
       "PackagePath": "staticwebassets\\css\\animate.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\css\\bootstrap.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\css\\flexslider.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\css\\flexslider.css",
       "PackagePath": "staticwebassets\\css\\flexslider.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\css\\font-awesome.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\css\\font-awesome.css",
       "PackagePath": "staticwebassets\\css\\font-awesome.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\css\\ken-burns.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\css\\ken-burns.css",
       "PackagePath": "staticwebassets\\css\\ken-burns.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\css\\menu.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\css\\menu.css",
       "PackagePath": "staticwebassets\\css\\menu.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\css\\owl.carousel.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\css\\owl.carousel.css",
       "PackagePath": "staticwebassets\\css\\owl.carousel.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\css\\site.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\css\\style.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\favicon.ico",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\fonts\\FontAwesome.otf",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\fonts\\glyphicons-halflings-regular.woff",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\fonts\\glyphicons-halflings-regular.woff",
       "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\fonts\\glyphicons-halflings-regular.woff2",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\fonts\\glyphicons-halflings-regular.woff2",
       "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff2"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\3.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\3.jpg",
       "PackagePath": "staticwebassets\\images\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\5.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\5.jpg",
       "PackagePath": "staticwebassets\\images\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\8.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\8.jpg",
       "PackagePath": "staticwebassets\\images\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\a1.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\a1.png",
       "PackagePath": "staticwebassets\\images\\a1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\a2.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\a2.png",
       "PackagePath": "staticwebassets\\images\\a2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\a3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\a3.png",
       "PackagePath": "staticwebassets\\images\\a3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\a4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\a4.png",
       "PackagePath": "staticwebassets\\images\\a4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\a5.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\a5.png",
       "PackagePath": "staticwebassets\\images\\a5.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\a6.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\a6.png",
       "PackagePath": "staticwebassets\\images\\a6.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\b1.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\b1.png",
       "PackagePath": "staticwebassets\\images\\b1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\b2.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\b2.png",
       "PackagePath": "staticwebassets\\images\\b2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\b3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\b3.png",
       "PackagePath": "staticwebassets\\images\\b3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\b4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\b4.png",
       "PackagePath": "staticwebassets\\images\\b4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\bg.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\bg.png",
       "PackagePath": "staticwebassets\\images\\bg.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\bg1.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\bg1.jpg",
       "PackagePath": "staticwebassets\\images\\bg1.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\bg2.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\bg2.jpg",
       "PackagePath": "staticwebassets\\images\\bg2.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\e1.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\e1.png",
       "PackagePath": "staticwebassets\\images\\e1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\e2.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\e2.png",
       "PackagePath": "staticwebassets\\images\\e2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\e3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\e3.png",
       "PackagePath": "staticwebassets\\images\\e3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\e4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\e4.png",
       "PackagePath": "staticwebassets\\images\\e4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\f1.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\f1.png",
       "PackagePath": "staticwebassets\\images\\f1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\f2.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\f2.png",
       "PackagePath": "staticwebassets\\images\\f2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\f3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\f3.png",
       "PackagePath": "staticwebassets\\images\\f3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\f4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\f4.png",
       "PackagePath": "staticwebassets\\images\\f4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\f5.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\f5.png",
       "PackagePath": "staticwebassets\\images\\f5.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\f6.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\f6.png",
       "PackagePath": "staticwebassets\\images\\f6.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\f7.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\f7.png",
       "PackagePath": "staticwebassets\\images\\f7.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\f8.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\f8.png",
       "PackagePath": "staticwebassets\\images\\f8.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\f9.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\f9.png",
       "PackagePath": "staticwebassets\\images\\f9.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\g1.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\g1.png",
       "PackagePath": "staticwebassets\\images\\g1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\g2.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\g2.png",
       "PackagePath": "staticwebassets\\images\\g2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\g3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\g3.png",
       "PackagePath": "staticwebassets\\images\\g3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\g4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\g4.png",
       "PackagePath": "staticwebassets\\images\\g4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\g5.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\g5.png",
       "PackagePath": "staticwebassets\\images\\g5.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\g6.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\g6.png",
       "PackagePath": "staticwebassets\\images\\g6.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\h1.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\h1.png",
       "PackagePath": "staticwebassets\\images\\h1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\h2.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\h2.png",
       "PackagePath": "staticwebassets\\images\\h2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\h3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\h3.png",
       "PackagePath": "staticwebassets\\images\\h3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\h4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\h4.png",
       "PackagePath": "staticwebassets\\images\\h4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\h5.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\h5.png",
       "PackagePath": "staticwebassets\\images\\h5.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\img1.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\img1.jpg",
       "PackagePath": "staticwebassets\\images\\img1.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\img2.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\img2.jpg",
       "PackagePath": "staticwebassets\\images\\img2.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\img3.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\img3.jpg",
       "PackagePath": "staticwebassets\\images\\img3.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\m1.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\m1.png",
       "PackagePath": "staticwebassets\\images\\m1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\m2.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\m2.png",
       "PackagePath": "staticwebassets\\images\\m2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\m3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\m3.png",
       "PackagePath": "staticwebassets\\images\\m3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\m4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\m4.png",
       "PackagePath": "staticwebassets\\images\\m4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\move-up.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\move-up.png",
       "PackagePath": "staticwebassets\\images\\move-up.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\p1.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\p1.png",
       "PackagePath": "staticwebassets\\images\\p1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\p2.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\p2.png",
       "PackagePath": "staticwebassets\\images\\p2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\p3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\p3.png",
       "PackagePath": "staticwebassets\\images\\p3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\p4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\p4.png",
       "PackagePath": "staticwebassets\\images\\p4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\s1.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\s1.jpg",
       "PackagePath": "staticwebassets\\images\\s1.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\s1.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\s1.png",
       "PackagePath": "staticwebassets\\images\\s1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\s2.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\s2.jpg",
       "PackagePath": "staticwebassets\\images\\s2.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\s2.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\s2.png",
       "PackagePath": "staticwebassets\\images\\s2.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\s3.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\s3.jpg",
       "PackagePath": "staticwebassets\\images\\s3.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\s3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\s3.png",
       "PackagePath": "staticwebassets\\images\\s3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\s4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\s4.png",
       "PackagePath": "staticwebassets\\images\\s4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\s5.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\s5.png",
       "PackagePath": "staticwebassets\\images\\s5.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\images\\tick.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\images\\tick.png",
       "PackagePath": "staticwebassets\\images\\tick.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\bootstrap.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\custom.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\custom.js",
       "PackagePath": "staticwebassets\\js\\custom.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\easing.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\easing.js",
       "PackagePath": "staticwebassets\\js\\easing.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\imagezoom.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\imagezoom.js",
       "PackagePath": "staticwebassets\\js\\imagezoom.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery-2.2.3.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery-2.2.3.min.js",
       "PackagePath": "staticwebassets\\js\\jquery-2.2.3.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery-scrolltofixed-min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery-scrolltofixed-min.js",
       "PackagePath": "staticwebassets\\js\\jquery-scrolltofixed-min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery.classycountdown.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery.classycountdown.js",
       "PackagePath": "staticwebassets\\js\\jquery.classycountdown.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery.flexslider.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery.flexslider.js",
       "PackagePath": "staticwebassets\\js\\jquery.flexslider.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery.jscrollpane.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery.jscrollpane.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.jscrollpane.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery.knob.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery.knob.js",
       "PackagePath": "staticwebassets\\js\\jquery.knob.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery.marquee.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery.marquee.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.marquee.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery.menu-aim.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery.menu-aim.js",
       "PackagePath": "staticwebassets\\js\\jquery.menu-aim.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery.mousewheel.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery.mousewheel.js",
       "PackagePath": "staticwebassets\\js\\jquery.mousewheel.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\jquery.throttle.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\jquery.throttle.js",
       "PackagePath": "staticwebassets\\js\\jquery.throttle.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\main.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\minicart.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\minicart.js",
       "PackagePath": "staticwebassets\\js\\minicart.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\move-top.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\move-top.js",
       "PackagePath": "staticwebassets\\js\\move-top.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\owl.carousel.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\owl.carousel.js",
       "PackagePath": "staticwebassets\\js\\owl.carousel.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\js\\site.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\Checkout.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\Checkout.css"
+    },
+    {
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\a3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\a3.png",
       "PackagePath": "staticwebassets\\product\\a3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\a3.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\a3.png",
       "PackagePath": "staticwebassets\\product\\images\\a3.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\a4.png",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\a4.png",
       "PackagePath": "staticwebassets\\product\\images\\a4.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\download (9).jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\download (9).jpg",
       "PackagePath": "staticwebassets\\product\\images\\download (9).jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\images (3).jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\images (3).jpg",
       "PackagePath": "staticwebassets\\product\\images\\images (3).jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\images (4).jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\images (4).jpg",
       "PackagePath": "staticwebassets\\product\\images\\images (4).jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\images (6).jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\images (6).jpg",
       "PackagePath": "staticwebassets\\product\\images\\images (6).jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\images.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\images.jpg",
       "PackagePath": "staticwebassets\\product\\images\\images.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1130666913-1024x1024.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1130666913-1024x1024.jpg",
       "PackagePath": "staticwebassets\\product\\images\\istockphoto-1130666913-1024x1024.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1133928949-1024x1024.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1133928949-1024x1024.jpg",
       "PackagePath": "staticwebassets\\product\\images\\istockphoto-1133928949-1024x1024.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1158453494-1024x1024.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1158453494-1024x1024.jpg",
       "PackagePath": "staticwebassets\\product\\images\\istockphoto-1158453494-1024x1024.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1197162174-1024x1024.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1197162174-1024x1024.jpg",
       "PackagePath": "staticwebassets\\product\\images\\istockphoto-1197162174-1024x1024.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1458462453-1024x1024.jpg",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\istockphoto-1458462453-1024x1024.jpg",
       "PackagePath": "staticwebassets\\product\\images\\istockphoto-1458462453-1024x1024.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\photo-1525609004556-c46c7d6cf023.avif",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\photo-1525609004556-c46c7d6cf023.avif",
       "PackagePath": "staticwebassets\\product\\images\\photo-1525609004556-c46c7d6cf023.avif"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\photo-1553440569-bcc63803a83d.avif",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\photo-1553440569-bcc63803a83d.avif",
       "PackagePath": "staticwebassets\\product\\images\\photo-1553440569-bcc63803a83d.avif"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\photo-1555353540-64580b51c258.avif",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\photo-1555353540-64580b51c258.avif",
       "PackagePath": "staticwebassets\\product\\images\\photo-1555353540-64580b51c258.avif"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\E-CommereceMVCBackup\\EcommerceApplication\\wwwroot\\product\\images\\photo-1605559424843-9e4c228bf1c2.avif",
+      "Id": "D:\\WorkSpace\\MYECommApp\\MYECommApp\\EcommerceApplication\\wwwroot\\product\\images\\photo-1605559424843-9e4c228bf1c2.avif",
       "PackagePath": "staticwebassets\\product\\images\\photo-1605559424843-9e4c228bf1c2.avif"
     },
     {

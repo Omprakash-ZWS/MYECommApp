@@ -1,294 +1,662 @@
-﻿@* @model List<EcommerceApplication.Models.Product> *@
-
+﻿@model EcommerceApplication.Models.Registration
 @{
     ViewData["Title"] = "Checkout";
 }
+@{
+    //if we give layout is null it does not give the _Layout.cshtml code
+    Layout = null;
+}
 
-<h2>Checkout</h2>
+<h2>Checkout</h2>   
+    
+    <html lang="en">
+    <head>
+        <link href="~/lib/bootstrap/dist/css/checkout.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/EcommerceApplication.styles.css" asp-append-version="true" />
+        <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="~/css/menu.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- menu style -->
+        <link href="~/css/ken-burns.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- banner slider -->
+        <link href="~/css/animate.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
+        <!-- carousel slider -->
+        <!-- //Custom Theme files -->
+        <!-- font-awesome icons -->
+        <link href="~/css/font-awesome.css" rel="stylesheet">
+        <!-- //font-awesome icons -->
+        <!-- js -->
+        <!-- //js -->
+        <!-- web-fonts -->
+        <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+        <!-- web-fonts -->
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </head>
+    <body>
+        <!-- //header -->
+        <!-- card-page -->
+        <div class="card-page">
+            @*
+            <div class="container">
+            *@
+            <h3 class="w3ls-title w3ls-title1"> Add TO Cart Product & Checkout</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ftco-animate fadeInUp ftco-animated">
+                        <div class="cart-list">
+                            @*
+                            <div class="container">
+                            <div class="panel panel-default">
+                            <div class="panel-body">
+                            *@
+                            <div class="stepper">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a class="persistant-disabled" href="#stepper-step-1" data-toggle="tab" aria-controls="stepper-step-1" role="tab" title="Step 1">
+                                            <span class="round-tab">1</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="disabled">
+                                        <a class="persistant-disabled" href="#stepper-step-2" data-toggle="tab" aria-controls="stepper-step-2" role="tab" title="Step 2">
+                                            <span class="round-tab">2</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="disabled">
+                                        <a class="persistant-disabled" href="#stepper-step-3" data-toggle="tab" aria-controls="stepper-step-3" role="tab" title="Step 3">
+                                            <span class="round-tab">3</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="disabled">
+                                        <a class="persistant-disabled" href="#stepper-step-4" data-toggle="tab" aria-controls="stepper-step-4" role="tab" title="Complete">
+                                            <span class="round-tab">4</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <form asp-action="Create" id="formdata" role="form">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade in active" role="tabpanel" id="stepper-step-1">
+                                                    <h3 class="h2">Please Enter Your Deatil</h3>
+                                                    <p>This is step 1</p>
+                                                    <ul class="list-inline pull-right">
+                                                        <hr>
+                                                    
+                                                    <div class="form-group">
+                                                        <label asp-for="FirstName" class="control-label"></label>
+                                                        <input asp-for="FirstName" id="txtfname" class="form-control" placeholder="FirstName" />
+                                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                                    </div>
 
-<div>
-    <h4>Product</h4>
+                                                    
+                                                    <label asp-for="MiddleName" class="control-label"> Middlename: </label>
+                                                    <input asp-for="MiddleName" id="txtmname" type="text" name="Middlename" placeholder="Middlename" class="form-control" size="15" required />
+                                                    <span asp-validation-for="MiddleName" class="text-danger"></span>
 
-
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-
-</head>
-<body>
-	
-	<!-- //header --> 	
-	<!-- card-page -->
-	<div class="card-page">
-		<div class="container"> 
-			<h3 class="w3ls-title w3ls-title1"> Add TO Cart Product & Checkout</h3>  
-
-			<div class="container">
-			<div class="row">
-			<div class="col-md-12 ftco-animate fadeInUp ftco-animated">
-			<div class="cart-list">
-
-
-				<table class="table">
-					<thead class="thead-primary">
-						<tr class="text-center">
-							<th></th>
-							<th>Final Total</th>
-							@* <th>Product Name</th>							
-							<th>Price</th>
-							<th>Qnty</th>
-							<th>Total</th> *@
-
-
-						</tr>
-
-					</thead>
-					<tbody>
-
-				
-						<tr >
-							<td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-
-											<td><h3>@ViewBag.FinalTotal</h3></td>
-											@* <td ><h3>@item.ProductName</h3></td>							
-							<td><h3>@item.Price</h3></td>
-							<td class="product-name">
-													<h3>
-														<button class="btn-quantity decrease" data-productid="@item.ProductId" data-price="@item.Price">-</button>
-														<span class="quantity">@item.proquantity</span>
-														<button class="btn-quantity increase" data-productid="@item.ProductId" data-price="@item.Price">+</button>
-													</h3>
-
-							</td>
-							<td class="product-name"><h3>@item.Category</h3></td> *@
-							<td>
-								<a class="btn btn-primary" asp-action="" asp-route-id="">Make Payment</a>
-
-							</td>
-						</tr>
-	@* } *@
-									
-					</tbody>
-				</table>
-
-
-			</div>
-			</div>
-			</div>
-			</div>
-
-
-
-
-
-			<div class="agile-card-top">
-				<div class="col-md-4 card-top-grids">
-					<h4>Save <span>$15</span></h4>
-					<i class="fa fa-camera" aria-hidden="true"></i>
-					<h5>on purchase of Electronics In Smart bazaar.com</h5>
-				</div>
-				<div class="col-md-4 card-top-grids">
-					<h4>Save <span>$5</span></h4>
-					<i class="fa fa-motorcycle" aria-hidden="true"></i>
-					<h5>on purchase of Smart bazaar Automotive </h5>
-				</div>
-				<div class="col-md-4 card-top-grids">
-					<h4>Save <span>$20</span></h4>
-					<i class="fa fa-users" aria-hidden="true"></i>
-					<h5>on purchase of Clothings Using Card</h5>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="agile-card-text">
-				<h5>New User Account Offers</h5>
-				<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas faucibus ipsum et libero euismod iaculis. Integer consectetur congue laoreet. Morbi eget leo elementum, vulputate eros et, egestas diam. Nam egestas, quam id viverra congue, elit mi eleifend libero, eget vulputate ante lorem vel quam. Sed suscipit ligula eu mi bibendum, vel mollis enim finibus. Suspendisse vitae est tortor. Donec aliquet leo vitae ligula mattis, vitae auctor mi pellentesque. Integer eu dui accumsan, convallis neque id, malesuada urna. </p>
-				<h5>Special account openings</h5>
-				<p>Nulla sodales nulla et ipsum pharetra pharetra. Suspendisse potenti. Phasellus cursus vehicula lorem, nec dignissim orci cursus tempor. Suspendisse vel ullamcorper arcu. Mauris tellus augue, tristique ut varius ac, scelerisque ac urna. Mauris nibh ligula, cursus eu vehicula a, scelerisque a nunc. Mauris sit amet sem orci. Proin sit amet tortor non massa tincidunt faucibus. Sed a lacus a purus congue dignissim. Maecenas auctor urna et ullamcorper sagittis. Aenean semper, nisi sed vulputate euismod, justo odio dictum lorem, a mattis ipsum magna non quam.<br>  Maecenas faucibus ipsum et libero euismod iaculis. Integer consectetur congue laoreet. Morbi eget leo elementum, vulputate eros et, egestas diam. Nam egestas, quam id viverra congue, elit mi eleifend libero, eget vulputate ante lorem vel quam. Sed suscipit ligula eu mi bibendum, vel mollis enim finibus. Suspendisse vitae est tortor. Donec aliquet leo vitae ligula mattis, vitae auctor mi pellentesque. Integer eu dui accumsan, convallis neque id, malesuada urna. </p>
-			</div>
-		</div>
-	</div>
-	<!-- //card-page --> 
-	<!-- footer-top -->
-	<div class="w3agile-ftr-top">
-		<div class="container">
-			<div class="ftr-toprow">
-				<div class="col-md-4 ftr-top-grids">
-					<div class="ftr-top-left">
-						<i class="fa fa-truck" aria-hidden="true"></i>
-					</div> 
-					<div class="ftr-top-right">
-						<h4>FREE DELIVERY</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-					</div> 
-					<div class="clearfix"> </div>
-				</div> 
-				<div class="col-md-4 ftr-top-grids">
-					<div class="ftr-top-left">
-						<i class="fa fa-user" aria-hidden="true"></i>
-					</div> 
-					<div class="ftr-top-right">
-						<h4>CUSTOMER CARE</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-					</div> 
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-md-4 ftr-top-grids">
-					<div class="ftr-top-left">
-						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-					</div> 
-					<div class="ftr-top-right">
-						<h4>GOOD QUALITY</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-					</div>
-					<div class="clearfix"> </div>
-				</div> 
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //footer-top --> 
-	<!-- subscribe -->
-	<div class="subscribe"> 
-		<div class="container">
-			<div class="col-md-6 social-icons w3-agile-icons">
-				<h4>Keep in touch</h4>  
-				<ul>
-					<li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
-					<li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
-					<li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
-					<li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
-					<li><a href="#" class="fa fa-rss icon rss"> </a></li> 
-				</ul>
-				<ul class="apps"> 
-					<li><h4>Download Our app : </h4> </li>
-					<li><a href="#" class="fa fa-apple"></a></li>
-					<li><a href="#" class="fa fa-windows"></a></li>
-					<li><a href="#" class="fa fa-android"></a></li>
-				</ul>
-			</div> 
-			<div class="col-md-6 subscribe-right">
-				<h4>Sign up for email and get 25%off!</h4>  
-				<form action="#" method="post"> 
-					<input type="text" name="email" placeholder="Enter your Email..." required="">
-					<input type="submit" value="Subscribe">
-				</form>
-				<div class="clearfix"> </div> 
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-	<!-- //subscribe --> 
-	<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="footer-info w3-agileits-info">
-				<div class="col-md-4 address-left agileinfo">
-					<div class="footer-logo header-logo">
-						<h2><a href="index.html"><span>S</span>mart <i>Bazaar</i></a></h2>
-						<h6>Your stores. Your place.</h6>
-					</div>
-					<ul>
-						<li><i class="fa fa-map-marker"></i> 123 San Sebastian, New York City USA.</li>
-						<li><i class="fa fa-mobile"></i> 333 222 3333 </li>
-						<li><i class="fa fa-phone"></i> +222 11 4444 </li>
-						<li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@example.com</a></li>
-					</ul> 
-				</div>
-				<div class="col-md-8 address-right">
-					<div class="col-md-4 footer-grids">
-						<h3>Company</h3>
-						<ul>
-							<li><a href="about.html">About Us</a></li>
-							<li><a href="marketplace.html">Marketplace</a></li>  
-							<li><a href="values.html">Core Values</a></li>  
-							<li><a href="privacy.html">Privacy Policy</a></li>
-						</ul>
-					</div>
-					<div class="col-md-4 footer-grids">
-						<h3>Services</h3>
-						<ul>
-							<li><a href="contact.html">Contact Us</a></li>
-							<li><a href="login.html">Returns</a></li> 
-							<li><a href="faq.html">FAQ</a></li>
-							<li><a href="sitemap.html">Site Map</a></li>
-							<li><a href="login.html">Order Status</a></li>
-						</ul> 
-					</div>
-					<div class="col-md-4 footer-grids">
-						<h3>Payment Methods</h3>
-						<ul>
-							<li><i class="fa fa-laptop" aria-hidden="true"></i> Net Banking</li>
-							<li><i class="fa fa-money" aria-hidden="true"></i> Cash On Delivery</li>
-							<li><i class="fa fa-pie-chart" aria-hidden="true"></i>EMI Conversion</li>
-							<li><i class="fa fa-gift" aria-hidden="true"></i> E-Gift Voucher</li>
-							<li><i class="fa fa-credit-card" aria-hidden="true"></i> Debit/Credit Card</li>
-						</ul>  
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-	<!-- //footer -->		
-	<div class="copy-right"> 
-		<div class="container">
-			<p>© 2016 Smart bazaar . All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>
-		</div>
-	</div> 
-	<!-- cart-js -->
-	<script src="~/js/minicart.js"></script>
-	<script>
+                                                    
+                                                    <label asp-for="LastName" class="control-label"> Lastname: </label>
+                                                    <input asp-for="LastName" type="text" id="txtlname" name="LastName" placeholder="Lastname" class="form-control" size="15" required />
+                                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                                    <div>
+                                                            <label class="control-label">
+                                                                Gender :
+                                                            </label><br>
+                                                            <input type="radio" id="Male" value="Male" name="gender" checked> Male
+                                                        <input type="radio" id="Female" value="Female" name="gender"> Female
+                                                        <input type="radio" id="Other" value="Other" name="gender"> Other
+                                                        </div>
+                                                        <label class="control-label">
+                                                            Phone :
+                                                        </label>
+                                                        <input class="form-control" type="text" name="country code" placeholder="Country Code" value="+91" size="2" />
+                                                        <input class="form-control" type="text" id="phoneNo"name="phone" placeholder="phone no." size="10" / required>
+                                                        <label class="control-label">
+                                                            Current Address :
+                                                        </label>
+                                                        <textarea cols="80" rows="5" id="txtAddress" placeholder="Current Address" class="form-control" value="address" required>  
+                                                        </textarea>
+                                                        <label for="email" class="control-label"><b>Email</b></label>
+                                                        <input type="text" id="txtemail" placeholder="Enter Email" name="email" class="form-control" required>
+                                                        <label class="control-label" for="psw"><b>Password</b></label>
+                                                        <input type="password" id="txtpassword" placeholder="Enter Password" class="form-control" name="psw" required>
+                                                        <label for="psw-repeat" class="control-label"><b>Re-type Password</b></label>
+                                                    <input type="password" id="txtcpassword"  placeholder="Retype Password" name="psw-repeat" class="form-control" required>
+                                                    @* 			<button type="submit" class="btn btn-primary">Register</button> *@
+                                                        <li>
+                                                        <a id="add-userdata-save-link" class="btn btn-primary next-step">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" role="tabpanel" id="stepper-step-2">
+                                                    <h3 class="h2">2. Enter Payment Information</h3>
+                                                    <p>This is step 2</p>
+                                                    <ul class="list-inline pull-right">
+                                                        <div class="row">
+                                                    @*         <div class="col-50">
+                                                                <h3>Billing Address</h3>
+                                                                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                                                <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                                                <input type="text" id="email" name="email" placeholder="john@example.com">
+                                                                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                                                <label for="city"><i class="fa fa-institution"></i> City</label>
+                                                                <input type="text" id="city" name="city" placeholder="New York">
+                                                                <div class="row">
+                                                                    <div class="col-50">
+                                                                        <label for="state">State</label>
+                                                                        <input type="text" id="state" name="state" placeholder="NY">
+                                                                    </div>
+                                                                    <div class="col-50">
+                                                                        <label for="zip">Zip</label>
+                                                                        <input type="text" id="zip" name="zip" placeholder="10001">
+                                                                    </div>
+                                                                </div>
+                                                            </div> *@
+                                                            <div class="col-50">
+                                                                <h3>Payment</h3>
+                                                                <label for="fname">Accepted Cards</label>
+                                                                <div class="icon-container">
+                                                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                                                </div>
+                                                                <label for="cname">Name on Card</label>
+                                                                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                                                <label for="ccnum">Credit card number</label>
+                                                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                                                <label for="expmonth">Exp Month</label>
+                                                                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                                                                <div class="row">
+                                                                    <div class="col-50">
+                                                                        <label for="expyear">Exp Year</label>
+                                                                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                                                    </div>
+                                                                    <div class="col-50">
+                                                                        <label for="cvv">CVV</label>
+                                                                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <label>
+                                                            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                                                        </label>
+                                                        <input type="submit" value="Continue to checkout" class="btn btn-primary">
+                                                        <li>
+                                                            <a class="btn btn-default prev-step">Back</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="btn btn-primary next-step">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" role="tabpanel" id="stepper-step-3">
+                                                    <h3 class="hs">3. Review and Submit Payment</h3>
+                                                    <p>This is step 3</p>
+                                                    <ul class="list-inline pull-right">
+                                                        <li>
+                                                            <a class="btn btn-default prev-step">Back</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="btn btn-default cancel-stepper">Cancel Payment</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="btn btn-primary next-step">Submit Payment</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" role="tabpanel" id="stepper-step-4">
+                                                    <h3>4. All done!</h3>
+                                                    <p>You have successfully completed all steps.</p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                @*
+                                </div>
+                                </div>
+                                </div>
+                                *@
+                                <table class="table">
+                                    <thead class="thead-primary">
+                                        <tr class="text-center">
+                                            <th></th>
+                                            <th>Final Total</th>
+                                            @*
+                                            <th>Product Name</th>
+                                            <th>Price</th>
+                                            <th>Qnty</th>
+                                            <th>Total</th>
+                                            *@
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+                                            <td>
+                                                <h3>@ViewBag.FinalTotal</h3>
+                                            </td>
+                                            @*
+                                            <td >
+                                            <h3>@item.ProductName</h3>
+                                            </td>
+                                            <td>
+                                            <h3>@item.Price</h3>
+                                            </td>
+                                            <td class="product-name">
+                                            <h3>
+                                            <button class="btn-quantity decrease" data-productid="@item.ProductId" data-price="@item.Price">-</button>
+                                            <span class="quantity">@item.proquantity</span>
+                                            <button class="btn-quantity increase" data-productid="@item.ProductId" data-price="@item.Price">+</button>
+                                            </h3>
+                                            </td>
+                                            <td class="product-name">
+                                            <h3>@item.Category</h3>
+                                            </td>
+                                            *@
+                                            @*
+                                            <td>
+                                            <a class="btn btn-primary" asp-action="" asp-route-id="">Make Payment</a>
+                                            </td>
+                                            *@
+                                        </tr>
+                                        @* } *@
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agile-card-top">
+                    <div class="col-md-4 card-top-grids">
+                        <h4>Save <span>$15</span></h4>
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                        <h5>on purchase of Electronics In Smart bazaar.com</h5>
+                    </div>
+                    <div class="col-md-4 card-top-grids">
+                        <h4>Save <span>$5</span></h4>
+                        <i class="fa fa-motorcycle" aria-hidden="true"></i>
+                        <h5>on purchase of Smart bazaar Automotive </h5>
+                    </div>
+                    <div class="col-md-4 card-top-grids">
+                        <h4>Save <span>$20</span></h4>
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <h5>on purchase of Clothings Using Card</h5>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="agile-card-text">
+                    <h5>New User Account Offers</h5>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas faucibus ipsum et libero euismod iaculis. Integer consectetur congue laoreet. Morbi eget leo elementum, vulputate eros et, egestas diam. Nam egestas, quam id viverra congue, elit mi eleifend libero, eget vulputate ante lorem vel quam. Sed suscipit ligula eu mi bibendum, vel mollis enim finibus. Suspendisse vitae est tortor. Donec aliquet leo vitae ligula mattis, vitae auctor mi pellentesque. Integer eu dui accumsan, convallis neque id, malesuada urna. </p>
+                    <h5>Special account openings</h5>
+                    <p>Nulla sodales nulla et ipsum pharetra pharetra. Suspendisse potenti. Phasellus cursus vehicula lorem, nec dignissim orci cursus tempor. Suspendisse vel ullamcorper arcu. Mauris tellus augue, tristique ut varius ac, scelerisque ac urna. Mauris nibh ligula, cursus eu vehicula a, scelerisque a nunc. Mauris sit amet sem orci. Proin sit amet tortor non massa tincidunt faucibus. Sed a lacus a purus congue dignissim. Maecenas auctor urna et ullamcorper sagittis. Aenean semper, nisi sed vulputate euismod, justo odio dictum lorem, a mattis ipsum magna non quam.<br>  Maecenas faucibus ipsum et libero euismod iaculis. Integer consectetur congue laoreet. Morbi eget leo elementum, vulputate eros et, egestas diam. Nam egestas, quam id viverra congue, elit mi eleifend libero, eget vulputate ante lorem vel quam. Sed suscipit ligula eu mi bibendum, vel mollis enim finibus. Suspendisse vitae est tortor. Donec aliquet leo vitae ligula mattis, vitae auctor mi pellentesque. Integer eu dui accumsan, convallis neque id, malesuada urna. </p>
+                </div>
+            </div>
+        </div>
+        <!-- //card-page -->
+        <!-- footer-top -->
+        <div class="w3agile-ftr-top">
+            <div class="container">
+                <div class="ftr-toprow">
+                    <div class="col-md-4 ftr-top-grids">
+                        <div class="ftr-top-left">
+                            <i class="fa fa-truck" aria-hidden="true"></i>
+                        </div>
+                        <div class="ftr-top-right">
+                            <h4>FREE DELIVERY</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-4 ftr-top-grids">
+                        <div class="ftr-top-left">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                        <div class="ftr-top-right">
+                            <h4>CUSTOMER CARE</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-4 ftr-top-grids">
+                        <div class="ftr-top-left">
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="ftr-top-right">
+                            <h4>GOOD QUALITY</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- //footer-top -->
+        <!-- subscribe -->
+        <div class="subscribe">
+            <div class="container">
+                <div class="col-md-6 social-icons w3-agile-icons">
+                    <h4>Keep in touch</h4>
+                    <ul>
+                        <li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
+                        <li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
+                        <li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
+                        <li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
+                        <li><a href="#" class="fa fa-rss icon rss"> </a></li>
+                    </ul>
+                    <ul class="apps">
+                        <li>
+                            <h4>Download Our app : </h4>
+                        </li>
+                        <li><a href="#" class="fa fa-apple"></a></li>
+                        <li><a href="#" class="fa fa-windows"></a></li>
+                        <li><a href="#" class="fa fa-android"></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 subscribe-right">
+                    <h4>Sign up for email and get 25%off!</h4>
+                    <form action="#" method="post">
+                        <input type="text" name="email" placeholder="Enter your Email..." required="">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- //subscribe -->
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="footer-info w3-agileits-info">
+                    <div class="col-md-4 address-left agileinfo">
+                        <div class="footer-logo header-logo">
+                            <h2><a href="index.html"><span>S</span>mart <i>Bazaar</i></a></h2>
+                            <h6>Your stores. Your place.</h6>
+                        </div>
+                        <ul>
+                            <li><i class="fa fa-map-marker"></i> 123 San Sebastian, New York City USA.</li>
+                            <li><i class="fa fa-mobile"></i> 333 222 3333 </li>
+                            <li><i class="fa fa-phone"></i> +222 11 4444 </li>
+                            <li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@example.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 address-right">
+                        <div class="col-md-4 footer-grids">
+                            <h3>Company</h3>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="marketplace.html">Marketplace</a></li>
+                                <li><a href="values.html">Core Values</a></li>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 footer-grids">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="login.html">Returns</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="sitemap.html">Site Map</a></li>
+                                <li><a href="login.html">Order Status</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 footer-grids">
+                            <h3>Payment Methods</h3>
+                            <ul>
+                                <li><i class="fa fa-laptop" aria-hidden="true"></i> Net Banking</li>
+                                <li><i class="fa fa-money" aria-hidden="true"></i> Cash On Delivery</li>
+                                <li><i class="fa fa-pie-chart" aria-hidden="true"></i>EMI Conversion</li>
+                                <li><i class="fa fa-gift" aria-hidden="true"></i> E-Gift Voucher</li>
+                                <li><i class="fa fa-credit-card" aria-hidden="true"></i> Debit/Credit Card</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
+        <div class="copy-right">
+            <div class="container">
+                <p>© 2016 Smart bazaar . All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>
+            </div>
+        </div>
+        <!-- cart-js -->
+        <script src="~/js/minicart.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.js"></script>
+      
+    
+    <script>
+        
         w3ls.render();
+            w3ls.cart.on('w3sb_checkout', function (evt) {
+                var items, len, i;
+                if (this.subtotal() > 0) {
+                    items = this.items();
+                    for (i = 0, len = items.length; i < len; i++) {
+                        items[i].set('shipping', 0);
+                        items[i].set('shipping2', 0);
+                    }
+                }
+            });
 
-        w3ls.cart.on('w3sb_checkout', function (evt) {
-        	var items, len, i;
+            //Data save to the Cookie And Client Side Validation
+        // $(document).ready(function () {
+        $(document).ready(function () {
+            $('#add-userdata-save-link').click(function (e) {
+                e.preventDefault();
+                debugger
+                
+                var FirstName = $('#txtfname').val();
+                var MiddleName = $('#txtmname').val();
+                var LastName = $('#txtlname').val();
+                var Phone = $('#phoneNo').val();
+                var Email = $('#txtemail').val();
+                var Gender = $('input[name="gender"]:checked').val();
+                // $('input[name="gender"]:checked').val();
+                var address = $('#txtAddress').val();
+                var Password = $('#txtpassword').val();
+                var ConformPassword = $('#txtcpassword').val();
+                if (FirstName == "") {
+                    // alert("Please Enter the FirstName")
+                    var flag = 1;
+                }
+                if (LastName == "") {
+                    var flag = 1;
+                } if (Phone == "") {
+                    // alert("Please Enter the Phone No.")
+                    var flag = 1;
+                }
+                if (Email == "") {
+                    // alert("Please Enter the Email.")
+                    var flag = 1;
+                }
+                if (Gender == "") {
+                    // alert("Please Enter the Gender")
+                    var flag = 1;
+                }
+                if (address == "") {
+                    // alert("Please Enter the address")
+                    var flag = 1;
+                }
+                if (Password == "") {
+                    // alert("Please Enter the Phone No.")
+                    var flag = 1;
+                }
+                if (ConformPassword == "") {
+                    // alert("Please Enter the ConformPassword")
+                    var flag = 1;
+                }
+                if (flag == 1) {
+                    alert("Please Enter The Correct Details");
+                }
+                var registration = {
+                    FirstName: FirstName,
+                    MiddleName: MiddleName,
+                    LastName: LastName,
+                    Phone: Phone,
+                    Email: Email,
+                    Gender: Gender,
+                    address: address,
+                    Password: Password,
+                };
+                // Cookies.set(UserDetail, registration, { expires: 365 });
+                registration = JSON.stringify(registration);
+                $.cookie("UserData", registration, { expires: 365 });
 
-        	if (this.subtotal() > 0) {
-        		items = this.items();
+                
+                $.ajax({
+                    type: 'POST',
+                    //url:- the whole data is url pass in HomeController of AddToCart action method
+                    url: '/Home/Create',
+                    //type: application/json; charset=utf-8
+                    //designates the content to be in JSON format, encoded in the UTF-8 character encoding.
+                    contentType: 'application/json; charset=utf-8',
+                    //JSON. stringify() Actually converts a JavaScript object into a string
+                    data: JSON.stringify(registration),  // Corrected JSON.stringify placement
 
-        		for (i = 0, len = items.length; i < len; i++) {
-        			items[i].set('shipping', 0);
-        			items[i].set('shipping2', 0);
-        		}
-        	}
-        });
+                    success: function (response) {
+                        if (response.success) {
 
+                            alert("User added to Cookie");
+                        } else {
 
-			// <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
-
-		<script>
-			$(document).ready(function () {
-				$('.btn-quantity').click(function () {
-					var productId = $(this).data('productid');
-					var quantityElement = $(this).siblings('.quantity');
-					var currentQuantity = parseInt(quantityElement.text());
-
-					if ($(this).hasClass('increase')) {
-						currentQuantity++;
-					} else {
-						if (currentQuantity > 0) {
-							currentQuantity--;
-						}
-					}
-
-					quantityElement.text(currentQuantity);
-					updateTotalPrice(productId, currentQuantity);
-				});
+                            alert(response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error adding product to cart:', error);
+                    }
+                });
 
 
-				
-			});
+            });
+        // });
 
-    </script>  
-	<!-- //cart-js -->	 
-	<!-- menu js aim -->
-	<script src="~/js/jquery.menu-aim.js"> </script>
-	<script src="~/js/main.js"></script> <!-- Resource jQuery -->
-	<!-- //menu js aim --> 
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="~/js/bootstrap.js"></script>
-</body>
+
+
+        //Stepper Code
+
+            (function ($) {
+                'use strict';
+
+                $(function () {
+
+                    $(document).ready(function () {
+                        function triggerClick(elem) {
+                            $(elem).click();
+                        }
+                        var $progressWizard = $('.stepper'),
+                            $tab_active,
+                            $tab_prev,
+                            $tab_next,
+                            $btn_prev = $progressWizard.find('.prev-step'),
+                            $btn_next = $progressWizard.find('.next-step'),
+                            $tab_toggle = $progressWizard.find('[data-toggle="tab"]'),
+                            $tooltips = $progressWizard.find('[data-toggle="tab"][title]');
+
+                        // To do:
+                        // Disable User select drop-down after first step.
+                        // Add support for payment type switching.
+
+                        //Initialize tooltips
+                        $tooltips.tooltip();
+
+                        //Wizard
+                        //toggle show hai to hide else hide hai to show
+                    //e get all the all the element in show.bs.tab
+                        $tab_toggle.on('show.bs.tab', function (e) {
+                            var $target = $(e.target);
+
+                            if (!$target.parent().hasClass('active, disabled')) {
+                                $target.parent().prev().addClass('completed');
+                            }
+                            if ($target.parent().hasClass('disabled')) {
+                                return false;
+                            }
+                        });
+
+                        // $tab_toggle.on('click', function(event) {
+                        //     event.preventDefault();
+                        //     event.stopPropagation();
+                        //     return false;
+                        // });
+
+                        $btn_next.on('click', function () {
+                            $tab_active = $progressWizard.find('.active');
+
+                            $tab_active.next().removeClass('disabled');
+
+                            $tab_next = $tab_active.next().find('a[data-toggle="tab"]');
+                            alert("om");
+                            alert(flag);
+                            if (flag != 1) {
+                                triggerClick($tab_next);
+                            }
+                        });
+                        $btn_prev.click(function () {
+                            $tab_active = $progressWizard.find('.active');
+                            $tab_prev = $tab_active.prev().find('a[data-toggle="tab"]');
+                            triggerClick($tab_prev);
+                        });
+                    });
+                });
+
+            }(jQuery, this));
+
+              });
+            // <script src="https://code.jquery.com/jquery-3.6.0.min.js" >
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('.btn-quantity').click(function () {
+                    var productId = $(this).data('productid');
+                    var quantityElement = $(this).siblings('.quantity');
+                    var currentQuantity = parseInt(quantityElement.text());
+
+                    if ($(this).hasClass('increase')) {
+                        currentQuantity++;
+                    } else {
+                        if (currentQuantity > 0) {
+                            currentQuantity--;
+                        }
+                    }
+                    quantityElement.text(currentQuantity);
+                    updateTotalPrice(productId, currentQuantity);
+                });
+            });
+
+        </script>
+        <!-- //cart-js -->
+        <!-- menu js aim -->
+        <script src="~/js/jquery.menu-aim.js"> </script>
+        <script src="~/js/main.js"></script>
+        <!-- Resource jQuery -->
+        <!-- //menu js aim -->
+        <!-- Bootstrap core JavaScript
+           ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="~/js/bootstrap.js"></script>
+    </body>
 </html>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

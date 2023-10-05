@@ -11,5 +11,7 @@ namespace EcommerceApplication.Context
 		}
 		public DbSet<Category> categories { get; set; }	
 		public DbSet<Product> products { get; set; }	
+		public DbSet<EcommerceApplication.Models.Registration> Registration { get; set; } = default!;
+		//public DbSet<Registration> registrations { get; set; }	
 	}
 }
