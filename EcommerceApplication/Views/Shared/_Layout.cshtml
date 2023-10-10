@@ -43,7 +43,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<script src="~/js/site.js" asp-append-version="true"></script>
 
 
-	<script src="js/jquery-scrolltofixed-min.js" type="~/text/javascript"></script>
+	<script src="~/js/jquery-scrolltofixed-min.js" type="~/text/javascript"></script>
 	<script>
 		$(document).ready(function () {
 
@@ -121,9 +121,18 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Product</a>
                         </li>
+
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="RegisterUser">Register</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+						</li>
                     </ul>
                 </div>
             </div>
+			@* this will help to show login and registration on the view *@
+			<partial name="_LoginPArtial"/>
         </nav>
 
 		<div class="header">

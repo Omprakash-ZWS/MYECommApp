@@ -3,6 +3,7 @@ using EcommerceApplication.Models;
 using EcommerceApplication.Models.ViewModel;
 using EcommerceApplication.Service.Infrastructure;
 using EcommerceApplication.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
@@ -12,15 +13,13 @@ using System.Diagnostics;
 
 namespace EcommerceApplication.Controllers
 {
+	
 	public class HomeController : Controller
 	{
 
-		private readonly IHttpContextAccessor _httpContextAccessor;
-		//private readonly ProductRepository _productRepository;
-		private IGenericRepository<Category> _category;
-		//private IGenericRepository<CategoryDto> _categorydto;
-        private readonly IGenericRepository<Product> _product;
-        //private readonly IGenericRepository<ProductDto> _productdto;
+		private readonly IHttpContextAccessor _httpContextAccessor;		
+		private IGenericRepository<Category> _category;		
+        private readonly IGenericRepository<Product> _product;        
         private readonly ECommDbContext _context;
 		private readonly IUnitOfWork _unitOfWork;
 		public HomeController(ECommDbContext context, IUnitOfWork unitOfWork,
@@ -34,7 +33,6 @@ namespace EcommerceApplication.Controllers
             _unitOfWork = unitOfWork;
 			_context = context;
 			_httpContextAccessor = httpContextAccessor;
-			//_productRepository = productRepository;
 		}
 
 		public IActionResult Index()
@@ -148,7 +146,7 @@ namespace EcommerceApplication.Controllers
 
             return View(cart);
         }
-
+		//for search the product from the database
 		//public IActionResult OnGet(string SearchTerm)
 		//{
 		// var Product = _productRepository.Search(SearchTerm);
@@ -165,7 +163,7 @@ namespace EcommerceApplication.Controllers
 		//[]
 		[HttpPost]
         public IActionResult Create([FromBody] Registration registration)
-        {
+			{
             return View();
         }
 

@@ -18,18 +18,21 @@ using EcommerceApplication.Models.ViewModel;
 using AutoMapper.Features;
 using Humanizer;
 using System.Security.Policy;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EcommerceApplication.Controllers
 {
+    [Authorize]
     public class CategoriesController : Controller
     {
+		
         //private IHostingEnvironment Environment;
 		private readonly IHostingEnvironment _environment;
         private IGenericRepository<Category> _category;      
         private readonly ECommDbContext _context;
         private readonly IUnitOfWork _unitOfWork;
-
-		public CategoriesController(ECommDbContext context, IUnitOfWork unitOfWork,
+        
+        public CategoriesController(ECommDbContext context, IUnitOfWork unitOfWork,
             IGenericRepository<Category> category, IHostingEnvironment environment)
         {
             _category = category;            
@@ -37,8 +40,8 @@ namespace EcommerceApplication.Controllers
 			_context = context;
             _environment = environment;
         }
-
-		// GET: Categories
+        
+        // GET: Categories
         public ViewResult Index()
 		{
 			

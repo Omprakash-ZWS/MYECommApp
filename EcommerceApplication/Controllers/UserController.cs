@@ -2,14 +2,45 @@
 using Microsoft.AspNetCore.Mvc;
 using EcommerceApplication.Models;
 using Microsoft.DotNet.Scaffolding.Shared.Messaging;
+using Microsoft.AspNetCore.Identity;
+using EcommerceApplication.Models.ViewModel;
+using EcommerceApplication.Service.Interface;
+using EcommerceApplication.Models.EmailModel;
+using System.Text;
+using Microsoft.AspNetCore.WebUtilities;
+using Message = EcommerceApplication.Models.EmailModel.Message;
+using Azure;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace EcommerceApplication.Controllers
 {
     public class UserController : Controller
     {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IEmailService _emailService;
+        private readonly IConfiguration _configurations;
+
+        [TempData]
+        public string StatusMessage { get; set; }
+        public UserController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager,
+            IConfiguration configuration, IEmailService emailService, IHttpContextAccessor httpContextAccessor)
+        {
+            _signInManager = signInManager;
+            _userManager = userManager;
+            _emailService = emailService;
+            _configurations = configuration;
+            _httpContextAccessor = httpContextAccessor; 
+        }
         // GET: UserController
         public ActionResult Index()
         {
+
             return View();
         }
 
@@ -20,9 +51,127 @@ namespace EcommerceApplication.Controllers
         }
 
         // GET: UserController/Register
+        //Register User on Checkout Page. and save the data in cookie after click on next button.
         public ActionResult Register()
         {
             return View();
+        }
+
+        // GET: UserController/RegisterUser
+        public ActionResult RegisterUser()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult>  RegisterUser(RegisterDto registerDto, string returnUrl = null)
+        {
+            returnUrl ??= Url.Content("~/");
+            // Register User using UserManager and return JWT Token
+            var user = new ApplicationUser
+                {
+                    UserName = registerDto.Email,
+                    Email = registerDto.Email,
+                    PasswordHash = registerDto.Password,
+                    FirstName = registerDto.FirstName,
+                    MiddleName = registerDto.MiddleName,
+                    LastName = registerDto.LastName,
+                    Gender = registerDto.Gender,
+                    Address = registerDto.address,                 
+                };
+
+            var result = await _userManager.CreateAsync(user, registerDto.Password);
+
+            if (result.Succeeded)
+            { 
+
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+               
+                var callbackUrl = Url.Action(nameof(ConfirmEmail), "User", new { code, Email = user.Email }, Request.Scheme);
+                var message = new Message(new string[] { user.Email! }, "Confirmation email link", callbackUrl!);
+            
+               await _emailService.SendEmail(message);               
+                  return RedirectToAction("SendTokenMessage");
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+
+
+        //after sending the token to mail these will show the action method view will show the please verify your email first before login.
+        public ActionResult SendTokenMessage()
+        {
+            return View();
+        }
+
+        public ActionResult EmailSuccessMessage()
+        {
+            return View();
+        }
+
+
+        public async Task<IActionResult> ConfirmEmail(string Email, string code)
+        {
+            if (Email == null || code == null)
+            {
+                return RedirectToPage("/Index");
+            }
+
+            var user = await _userManager.FindByEmailAsync(Email);
+            if (user == null)
+            {
+                return NotFound($"Unable to load user with ID '{Email}'.");
+            }
+
+            code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
+            var result = await _userManager.ConfirmEmailAsync(user, code);
+            StatusMessage = result.Succeeded ? "Thank you for confirming your email." : "Error confirming your email.";
+            //return Page();
+            return RedirectToAction("EmailSuccessMessage");
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult>  Login(LoginDto loginDto)
+        {
+            CookieOptions options = new CookieOptions()
+            {
+                HttpOnly = true,
+                IsEssential = true,
+                Secure = false,
+                SameSite = SameSiteMode.Strict,
+                Domain = "localhost", //using https://localhost:44340/ here doesn't work
+                Expires = DateTime.UtcNow.AddDays(14)
+            };
+            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                // Validate user credentials
+            
+                // This doesn't count login failures towards account lockout
+                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                var result = await _signInManager.PasswordSignInAsync(loginDto.Email, loginDto.Password, loginDto.RememberMe, lockoutOnFailure: false);
+                if (!result.Succeeded)
+                {
+                   
+                    return NotFound();
+
+                }
+            
+                // Generate JWT token
+                var token = GenerateJwtToken(user);
+                _httpContextAccessor.HttpContext.Response.Cookies.Append("JwtToken", JsonConvert.SerializeObject(token), options);
+            }
+            return RedirectToAction("Index");
         }
 
         // POST: UserController/Create
@@ -75,6 +224,35 @@ namespace EcommerceApplication.Controllers
         {
             return View();
         }
+
+
+
+
+        private string GenerateJwtToken(ApplicationUser user)
+        {
+            string FullName = user.FirstName +" "+ user.LastName;
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Name ,$"{FullName}")              
+        };
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configurations.GetSection("Jwt:Key").Value));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var expires = DateTime.Now.AddDays(Convert.ToDouble(1));
+
+            var token = new JwtSecurityToken(
+                issuer: _configurations.GetSection("Jwt:Issuer").Value,
+                audience: _configurations.GetSection("Jwt:Audience").Value,
+                claims: claims,
+                expires: DateTime.Now.AddDays(1),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
 
         // POST: UserController/Delete/5
         [HttpPost]

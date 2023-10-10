@@ -197,7 +197,7 @@
                                                             <a class="btn btn-default prev-step">Back</a>
                                                         </li>
                                                         <li>
-                                                            <a class="btn btn-primary next-step">Next</a>
+                                                        <a id="add-carddata-save-link" class="btn btn-primary next-step">Next</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -439,73 +439,83 @@
         <!-- cart-js -->
         <script src="~/js/minicart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.js"></script>
+    @* <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.js"></script> *@
       
     
     <script>
-        
         w3ls.render();
-            w3ls.cart.on('w3sb_checkout', function (evt) {
-                var items, len, i;
-                if (this.subtotal() > 0) {
-                    items = this.items();
-                    for (i = 0, len = items.length; i < len; i++) {
-                        items[i].set('shipping', 0);
-                        items[i].set('shipping2', 0);
-                    }
+        w3ls.cart.on('w3sb_checkout', function (evt) {
+            var items, len, i;
+            if (this.subtotal() > 0) {
+                items = this.items();
+                for (i = 0, len = items.length; i < len; i++) {
+                    items[i].set('shipping', 0);
+                    items[i].set('shipping2', 0);
                 }
-            });
+            }
+        });
 
-            //Data save to the Cookie And Client Side Validation
-        // $(document).ready(function () {
+        function validateCardData() {
+
+            var CardName = $('#cname').val();
+            var CardNo = $('#ccnum').val();
+            var ExpMonth = $('#expmonth').val();
+            var ExpYear = $('#expyear').val();
+            var CVV = $('#cvv').val();
+
+            var inputsToValidate = [CardName, CardNo, ExpMonth, ExpYear, CVV];
+            var Errflag = 1;
+
+            for (var i = 0; i < inputsToValidate.length; i++) {
+                if (inputsToValidate[i] === "") {
+                    Errflag = 0;
+                    break;
+                }
+            }
+
+            return Errflag;
+        }
+
+
+        function validateInputs() {
+            var FirstName = $('#txtfname').val();
+            var LastName = $('#txtlname').val();
+            var Phone = $('#phoneNo').val();
+            var Email = $('#txtemail').val();
+            var Gender = $('input[name="gender"]:checked').val();
+            var address = $('#txtAddress').val();
+            var Password = $('#txtpassword').val();
+            var ConformPassword = $('#txtcpassword').val();
+
+
+            var inputsToValidate = [FirstName, LastName, Phone, Email, Gender, address, Password, ConformPassword];
+            var flag = 1;
+
+            for (var i = 0; i < inputsToValidate.length; i++) {
+                if (inputsToValidate[i] === "") {
+                    flag = 0;
+                    break;
+                }
+            }
+
+            return flag;
+        }
+        //Data save to the Cookie And Client Side Validation
+
         $(document).ready(function () {
             $('#add-userdata-save-link').click(function (e) {
                 e.preventDefault();
-                debugger
-                
                 var FirstName = $('#txtfname').val();
                 var MiddleName = $('#txtmname').val();
                 var LastName = $('#txtlname').val();
                 var Phone = $('#phoneNo').val();
                 var Email = $('#txtemail').val();
                 var Gender = $('input[name="gender"]:checked').val();
-                // $('input[name="gender"]:checked').val();
                 var address = $('#txtAddress').val();
                 var Password = $('#txtpassword').val();
                 var ConformPassword = $('#txtcpassword').val();
-                if (FirstName == "") {
-                    // alert("Please Enter the FirstName")
-                    var flag = 1;
-                }
-                if (LastName == "") {
-                    var flag = 1;
-                } if (Phone == "") {
-                    // alert("Please Enter the Phone No.")
-                    var flag = 1;
-                }
-                if (Email == "") {
-                    // alert("Please Enter the Email.")
-                    var flag = 1;
-                }
-                if (Gender == "") {
-                    // alert("Please Enter the Gender")
-                    var flag = 1;
-                }
-                if (address == "") {
-                    // alert("Please Enter the address")
-                    var flag = 1;
-                }
-                if (Password == "") {
-                    // alert("Please Enter the Phone No.")
-                    var flag = 1;
-                }
-                if (ConformPassword == "") {
-                    // alert("Please Enter the ConformPassword")
-                    var flag = 1;
-                }
-                if (flag == 1) {
-                    alert("Please Enter The Correct Details");
-                }
+                //Validiate Input Function Called
+
                 var registration = {
                     FirstName: FirstName,
                     MiddleName: MiddleName,
@@ -516,11 +526,26 @@
                     address: address,
                     Password: Password,
                 };
-                // Cookies.set(UserDetail, registration, { expires: 365 });
-                registration = JSON.stringify(registration);
-                $.cookie("UserData", registration, { expires: 365 });
+                var flag = validateInputs();
+                if (flag == 1) {
+                    registration = JSON.stringify(registration);
+                    var existingUserDataObject = [];
+                    var existingUserData = $.cookie("UserData");
+                    // existingUserData is null
+                    if (existingUserData !== null && typeof existingUserData !== "undefined") {
 
-                
+                        existingUserDataObject.push(existingUserData);
+                        // Add the new registration data to the existing cookie data
+                        existingUserDataObject.push(registration);
+                        alert(existingUserDataObject);
+                        // Update the UserData cookie with the updated data
+                        $.cookie("UserData", existingUserDataObject, { expires: 365 });
+                    }
+                    else {
+                        $.cookie("UserData", registration, { expires: 365 });
+                    }
+                }
+                //Sending data to controller but here it is not used the controller action action method to save data in database
                 $.ajax({
                     type: 'POST',
                     //url:- the whole data is url pass in HomeController of AddToCart action method
@@ -547,11 +572,42 @@
 
 
             });
-        // });
+
+            //Add User CardData in the cookie
+            // $(document).ready(function () {
+            //     $('#add-carddata-save-link').click(function (e) {
+            //         e.preventDefault();
+            //         var CardName = $('#cname').val();
+            //         var CardNo = $('#ccnum').val();
+            //         var ExpMonth = $('#expmonth').val();
+            //         var ExpYear = $('#expyear').val();
+            //         var CVV = $('#cvv').val();
+            //         var CardData = [{ CardName, CardNo, ExpMonth, ExpYear, CVV }];
+            //         var Errflag = validateCardData();
+            //         if (Errflag === 1) {
+            //             CardData = JSON.stringify(CardData);
+            //             var existingCartDataObject = [];
+            //             var existingCartData = $.cookie("CartData");
+            //             // existingUserData is null
+            //             if (existingCartData !== null && typeof existingCartData !== "undefined") {
+
+            //                 existingCartDataObject.push(existingCartData);
+            //                 // Add the new registration data to the existing cookie data
+            //                 existingCartDataObject.push(CardData);
+            //                 alert(existingCartDataObject);
+            //                 // Update the UserData cookie with the updated data
+            //                 $.cookie("CartData", existingCartDataObject, { expires: 365 });
+            //             }
+            //             else {
+            //                 $.cookie("CartData", CardData, { expires: 365 });
+            //             }
+            //         }
+            //     });
+            //});
 
 
 
-        //Stepper Code
+            //Stepper Code
 
             (function ($) {
                 'use strict';
@@ -580,7 +636,7 @@
 
                         //Wizard
                         //toggle show hai to hide else hide hai to show
-                    //e get all the all the element in show.bs.tab
+                        //e get all the all the element in show.bs.tab
                         $tab_toggle.on('show.bs.tab', function (e) {
                             var $target = $(e.target);
 
@@ -599,28 +655,83 @@
                         // });
 
                         $btn_next.on('click', function () {
-                            $tab_active = $progressWizard.find('.active');
+                            
+                            var stepperid = $progressWizard.find('.active')[1].id;
 
-                            $tab_active.next().removeClass('disabled');
+                            if (stepperid === 'stepper-step-1') {
+                                var flag = validateInputs();
+                                if (flag == 1) {
 
-                            $tab_next = $tab_active.next().find('a[data-toggle="tab"]');
-                            alert("om");
-                            alert(flag);
-                            if (flag != 1) {
-                                triggerClick($tab_next);
+
+
+                                    $tab_active = $progressWizard.find('.active');
+                                    
+                                    $tab_active.next().removeClass('disabled');
+                                    $tab_next = $tab_active.next().find('a[data-toggle="tab"]');
+                                    triggerClick($tab_next);
+                                } else {
+                                    alert("Please Enter The Correct User Details");
+                                }
+
+                            } else if (stepperid === 'stepper-step-2') {
+                                
+                                var Errflag = validateCardData();
+                                
+                                if (Errflag === 1) {
+
+                                    var CardName = $('#cname').val();
+                                    var CardNo = $('#ccnum').val();
+                                    var ExpMonth = $('#expmonth').val();
+                                    var ExpYear = $('#expyear').val();
+                                    var CVV = $('#cvv').val();
+                                    var CardData = [{ CardName, CardNo, ExpMonth, ExpYear, CVV }];
+                                    CardData = JSON.stringify(CardData);
+                                    var existingCartDataObject = [];
+                                    var existingCartData = $.cookie("CartData");
+                                    // existingUserData is null
+                                    if (existingCartData !== null && typeof existingCartData !== "undefined") {
+
+                                        existingCartDataObject.push(existingCartData);
+                                        // Add the new registration data to the existing cookie data
+                                        existingCartDataObject.push(CardData);
+                                        alert(existingCartDataObject);
+                                        // Update the UserData cookie with the updated data
+                                        $.cookie("CartData", existingCartDataObject, { expires: 365 });
+                                    }
+                                    else {
+                                        $.cookie("CartData", CardData, { expires: 365 });
+                                    }
+                                    $tab_active = $progressWizard.find('.active');
+                                    // alert($progressWizard.find('.active')[1].id);
+                                    $tab_active.next().removeClass('disabled');
+                                    $tab_next = $tab_active.next().find('a[data-toggle="tab"]');
+                                    triggerClick($tab_next);
+                                } else {
+                                    alert("Please Enter The Correct Cart Details");
+                                }
                             }
+
+
+
+
                         });
+
+
                         $btn_prev.click(function () {
                             $tab_active = $progressWizard.find('.active');
                             $tab_prev = $tab_active.prev().find('a[data-toggle="tab"]');
                             triggerClick($tab_prev);
                         });
+
+
+
+
                     });
                 });
 
             }(jQuery, this));
 
-              });
+        });
             // <script src="https://code.jquery.com/jquery-3.6.0.min.js" >
         </script>
         <script>
