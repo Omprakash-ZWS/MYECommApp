@@ -5,9 +5,7 @@ namespace EcommerceApplication.Models.ViewModel
 {
     public class CategoryDto    
     {
-       
-		
-		public int CategoryId { get; set; }
+        public int CategoryId { get; set; }
         
         [Required]
         public string CategoryName { get; set; }
@@ -21,8 +19,6 @@ namespace EcommerceApplication.Models.ViewModel
         public string colour { get; set; }
         [Required]
         public string description { get; set; }
-
-
 	}
   
 }

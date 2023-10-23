@@ -9,6 +9,13 @@
 
 
 }
+@* <a href="~/lib/jquery/dist/jquery.min.map">~/lib/jquery/dist/jquery.min.map</a>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validate/jquery.validate.js"></script>
+<script src="~/lib/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script> *@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -16,6 +23,7 @@
                 <form id="account" method="post">
                     @* <h4>Use a local account to log in.</h4> *@
                     <hr />
+
                     <div asp-validation-summary="All" class="text-danger"></div>
                     <div class="form-group">
                         <label asp-for="Email"></label>
@@ -28,11 +36,10 @@
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <div class="checkbox">
-                            <label asp-for="RememberMe">
-                                <input asp-for="RememberMe" />
-                                @Html.DisplayNameFor(m => m.RememberMe)
-                            </label>
+                        <div class="form-check">
+                            <input asp-for="RememberMe" class="form-check-input" />
+                            <label class="form-check-label" asp-for="RememberMe"></label>
+                            <span asp-validation-for="RememberMe" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="form-group">
@@ -40,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         <p>
-                            @* <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a> *@
+                             <a id="forgot-password" >Forgot your password?</a> 
                         </p>
                         <p>
                             @* <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a> *@

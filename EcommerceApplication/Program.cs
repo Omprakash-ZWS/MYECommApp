@@ -28,6 +28,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("ECommmvc")));
 //builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ECommDbContext>();
 //In Identtity Framework send the mockup link on RegisterConfirmation Link and this link verify using the "options => options.SignIn.RequireConfirmedAccount = true" code
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+               .AddRoles<IdentityRole>()
                .AddEntityFrameworkStores<ECommDbContext>()
                .AddDefaultTokenProviders();
 //builder.Services.Configure<IdentityOptions>(
@@ -43,10 +44,19 @@ builder.Services.AddScoped<IGenericRepository<ProductDto>, GenericRepository<Pro
 builder.Services.AddScoped<IEmailService, EmailSender>();
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
+//its important when we add Authorize attribute then this line will decide the default path for unauthorize user.
+builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/User/LogIn");
 //Add Email Configs
 var emailConfig = configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
 builder.Services.AddSingleton(emailConfig);
+
+
+builder.Services.AddAuthorization(options => {
+    options.AddPolicy("readpolicy",
+        builder => builder.RequireRole("Admin", "User"));
+    options.AddPolicy("writepolicy",
+        builder => builder.RequireRole("Admin"));
+});
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
              .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,

@@ -803,3 +803,4 @@ D:\WorkSpace\MYECommApp\MYECommApp\EcommerceApplication\bin\Debug\net7.0\MimeKit
 D:\WorkSpace\MYECommApp\MYECommApp\EcommerceApplication\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
 D:\WorkSpace\MYECommApp\MYECommApp\EcommerceApplication\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
 D:\WorkSpace\MYECommApp\MYECommApp\EcommerceApplication\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\WorkSpace\MYECommApp\MYECommApp\EcommerceApplication\bin\Debug\net7.0\libman.json

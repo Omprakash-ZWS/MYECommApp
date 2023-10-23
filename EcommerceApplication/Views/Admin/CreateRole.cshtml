@@ -1,0 +1,31 @@
+﻿@model EcommerceApplication.Models.ViewModel.CreateRoleDto
+
+@{
+    ViewData["Title"] = "Create Role";
+}
+
+<h2>Create Role</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <h3 background-colour="blue">Create a new Role</h3>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="RoleName"></label>
+                    <input asp-for="RoleName" class="form-control" />
+                    <span asp-validation-for="RoleName" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Role</button>
+            </form>
+        </div>
+    </div>
+    <br />
+    <br />
+   
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

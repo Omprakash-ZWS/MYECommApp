@@ -1,12 +1,23 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - EcommerceApplication</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/EcommerceApplication.styles.css" asp-append-version="true" />
+    <link rel="/
+.?" href="~/EcommerceApplication.styles.css" asp-append-version="true" />
 
     @* /similar code start*@
 	<title>Smart Bazaar an E-commerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
@@ -115,25 +126,51 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                        @*  <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li> *@
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Category</a>
-                        </li>
+							@* @if (SignInManager.IsSignedIn(User))
+			                { *@
+							<li class="nav-item">
+								<a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Category</a>
+							</li>
+			                @*  } *@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Product</a>
-                        </li>
-
-						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="RegisterUser">Register</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Login</a>
-						</li>
+                       
                     </ul>
                 </div>
             </div>
 			@* this will help to show login and registration on the view *@
-			<partial name="_LoginPArtial"/>
-        </nav>
+			@* <partial name="_LoginPArtial"/> *@
+			@if (SignInManager.IsSignedIn(User))
+			{
+
+				<ul class="navbar-nav flex-grow-1">
+						<li>
+						<a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">
+							Hello @UserManager.GetUserAsync(User).Result.FirstName @UserManager.GetUserAsync(User).Result.LastName!
+						</a>
+						</li>
+						<li>
+						@* <button type="button" class="btn btn-link navbar-btn navbar-link" onclick="window.location.href='<%= Url.Action("LogOut", "User")%>';"/>Log out</button> *@
+						<input type="button" class="btn btn-link navbar-btn navbar-link" value="LogOut" onclick="@("window.location.href='" + @Url.Action("LogOut", "User") + "'");" />
+					</li>
+					</ul>
+				
+			
+			}
+			else
+			{
+				<ul class="navbar-nav flex-grow-1">
+
+					<li class="ms-auto">
+						<a class="nav-link text-dark" asp-area="" class="" asp-controller="User" asp-action="RegisterUser">Register</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+					</li>
+				</ul>
+				
+			}
+		</nav>
 
 		<div class="header">
 		<div class="w3ls-header">
@@ -144,16 +181,16 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<div class="w3ls-header-right">
 				<ul>
 					<li class="dropdown head-dpdn">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i> My Account<span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
 						<ul class="dropdown-menu">
-							<li><a href="login.html">Login </a></li>
-							<li><a href="signup.html">Sign Up</a></li>
-							<li><a href="login.html">My Orders</a></li>
+								<li><a asp-controller="User" asp-action="Login">Login </a></li>
+								<li><a asp-controller="User" asp-action="RegisterUser">Sign Up</a></li>
+								<li><a onclick=ChangeRoute();>My Orders</a></li>
 							<li><a href="login.html">Wallet</a></li>
 						</ul>
 					</li>
 					<li class="dropdown head-dpdn">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-percent" aria-hidden="true"></i> Today's Deals<span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-percent" aria-hidden="true"></i> Today's Deals</a>
 						<ul class="dropdown-menu">
 							<li><a href="offers.html">Cash Back Offers</a></li>
 							<li><a href="offers.html">Product Discounts</a></li>
@@ -161,7 +198,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						</ul>
 					</li>
 					<li class="dropdown head-dpdn">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gift" aria-hidden="true"></i> Gift Cards<span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gift" aria-hidden="true"></i> Gift Cards</a>
 						<ul class="dropdown-menu">
 							<li><a href="offers.html">Product Gift card</a></li>
 							<li><a href="offers.html">Occasions Register</a></li>
@@ -169,13 +206,16 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						</ul>
 					</li>
 					<li class="dropdown head-dpdn">
-						<a href="contact.html" class="dropdown-toggle"><i class="fa fa-map-marker" aria-hidden="true"></i> Store Finder</a>
+							@* class="caret" *@
+						<a href="contact.html" ><i class="fa fa-map-marker" aria-hidden="true"></i> Store Finder</a>
 					</li>
 					<li class="dropdown head-dpdn">
-						<a href="card.html" class="dropdown-toggle"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit Card</a>
+							@* class="dropdown-toggle" *@
+						<a href="card.html" ><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit Card</a>
 					</li>
 					<li class="dropdown head-dpdn">
-						<a href="help.html" class="dropdown-toggle"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
+						@* class="dropdown-toggle" *@
+						<a href="help.html" ><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
 					</li>
 				</ul>
 			</div>
@@ -202,8 +242,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="cart">
 							<form action="/Home/CartProducts" method="get" class="last">
-							<input type="hidden" name="cmd" value="_cart" />
-							<input type="hidden" name="display" value="1"  />
+							@* <input type="hidden" name="cmd" value="_cart" />
+							<input type="hidden" name="display" value="1"  /> *@
 								@* asp-for="" *@
 							<button onclick=ChangeRoute(); class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
 						@* "@("window.location.replace='" + @Url.Action("CartProducts", "Home") + "'")" *@
@@ -1149,8 +1189,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
-	function ChangeRoute() {
-		// alert("my name is om");
+	function ChangeRoute() {		
 		window.location.href = '@Url.Action("CartProducts","Home")'
 	}
 

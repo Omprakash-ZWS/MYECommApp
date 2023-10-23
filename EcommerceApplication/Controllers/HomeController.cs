@@ -140,7 +140,7 @@ namespace EcommerceApplication.Controllers
         public IActionResult CartProducts()
 		{
 			//grtting the data from the cookies
-			var cartJson = _httpContextAccessor.HttpContext.Request.Cookies["CartCookies"] ?? "";
+			var cartJson = _httpContextAccessor?.HttpContext?.Request.Cookies["CartCookies"] ?? "";
 			//deserialize that list json data which is save in the cookie 
 			List<CartDto> cart = JsonConvert.DeserializeObject<List<CartDto>>(cartJson)!;
 

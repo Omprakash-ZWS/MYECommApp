@@ -1,0 +1,60 @@
+﻿@using EcommerceApplication.Models.ViewModel;
+@model List<UserRoleDto>
+@{
+    var roleId = ViewBag.roleId;
+}
+
+<form method="post">
+    <div clsss="container">
+    <div class="card">
+        <div class="card-header">
+            <h2>Add or remove users from this role</h2>
+        </div>
+        <div class="card-body">
+            
+            @for (int i = 0; i < Model.Count; i++)
+            {               
+                <div class="form-check m-1">
+                     <input type="hidden" asp-for="@Model[i].UserId"/>   
+                     <input type="hidden" asp-for="@Model[i].UserName"/>   
+                    <input asp-for="@Model[i].Isselected" class="form-check-input" />
+                        <label class="form-check-label" asp-for="@Model[i].Isselected">
+                            @Model[i].UserName
+                    </label>
+                </div>
+            }
+        </div>
+        <div class="card-footer">
+            <input type="submit" value="Update" class="btn btn-primary" style="width:auto" />
+                <input id="cancelbtn" type="button" onclick="Route(roleId)" value="Cancel" class="btn btn-success" style="width:auto" />
+        </div>
+    </div>
+    </div>
+</form>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    function Route(roleId) {
+        alert("my name is om");
+        // debugger
+        $.ajax({
+            type: 'GET',
+            url: "/Admin/EditRole?roleId=" + parseInt(roleId),
+            contentType: 'application/json; charset=utf-8',
+
+        });
+    }
+
+    // <script type="text/jscript" >
+    
+         //$('#cancelbtn').click(function () {
+        //     var url = "/Admin/EditRole";
+        //     $.get(url, null, function (data) {
+                
+        //     });
+        // })
+</script>
+
+
+
+

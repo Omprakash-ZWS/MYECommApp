@@ -22,7 +22,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace EcommerceApplication.Controllers
 {
-    [Authorize]
+
+    [Authorize(Roles = "Admin")]
     public class CategoriesController : Controller
     {
 		
@@ -40,7 +41,6 @@ namespace EcommerceApplication.Controllers
 			_context = context;
             _environment = environment;
         }
-        
         // GET: Categories
         public ViewResult Index()
 		{
@@ -157,7 +157,6 @@ namespace EcommerceApplication.Controllers
 		    {
 		        try
 		        {
-
                     Category cat = GetCategory(id);
 					cat.description = category.description;
 					cat.colour = category.colour;
