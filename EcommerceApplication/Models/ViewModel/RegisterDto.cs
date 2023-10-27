@@ -32,6 +32,7 @@ namespace EcommerceApplication.Models.ViewModel
         [DisplayName("Conform Password")]
         public string ConformPassword { get; set; }
         [DisplayName("User Role")]
+        [Required(ErrorMessage = "Role is Required")]
         public string UserRole { get; set; }
     }
 }

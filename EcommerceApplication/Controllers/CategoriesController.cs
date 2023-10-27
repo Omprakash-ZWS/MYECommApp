@@ -23,7 +23,8 @@ using Microsoft.AspNetCore.Authorization;
 namespace EcommerceApplication.Controllers
 {
 
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
+	
     public class CategoriesController : Controller
     {
 		
@@ -42,22 +43,20 @@ namespace EcommerceApplication.Controllers
             _environment = environment;
         }
         // GET: Categories
+        //[Authorize(Policy = "writepolicy")]
+            //[Authorize(Roles = "Admin")]
+
         public ViewResult Index()
-		{
-			
+		{			
 			List<CategoryDto> categories = _unitOfWork.Category.GetAll().Where(x => x.DeletedAt == null).Select(category  => 
 			new CategoryDto{
 				CategoryId = category.CategoryId,
 				CategoryName = category.CategoryName,
 				colour = category.colour,
 				description = category.description
-
 			}).ToList();
-
-
 			return View(categories);
         }
-
         // GET: Categories/Create
         public IActionResult Create()
 		{

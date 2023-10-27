@@ -15,14 +15,14 @@ namespace EcommerceApplication.Service.Infrastructure
 
 		//public ECommDbContext Context { get; }
 
-		//	public IEnumerable<CartDto> IProductRepository.Search(string earchTerm)
+		//public IEnumerable<CartDto> IProductRepository.Search(string earchTerm)
+		//{
+		//	if (string.IsNullOrEmpty(SearchTerm))
 		//	{
-		//		if (string.IsNullOrEmpty(SearchTerm))
-		//		{
-		//			return _ProductList;
-		//		}
-		//		return _ProductList.Where(e => e.ProductName.Contains(SearchTerm));
+		//		return _ProductList;
 		//	}
+		//	return _ProductList.Where(e => e.ProductName.Contains(SearchTerm));
+		//}
 
 		//	IEnumerable<CartDto> IProductRepository.Search(string searchTerm)
 		//	{

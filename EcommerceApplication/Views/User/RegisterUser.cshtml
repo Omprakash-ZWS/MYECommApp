@@ -1,7 +1,7 @@
 ﻿@model EcommerceApplication.Models.ViewModel.RegisterDto
 
 @{
-    ViewData["Title"] = "RegisterUser";
+    ViewData["Title"] = "";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -33,13 +33,7 @@
                     <input asp-for="Gender" type="radio" id="Female" value="Female" name="Gender"> Female
                     <input asp-for="Gender" type="radio" id="Other" value="Other" name="Gender"> Other
                     <span asp-validation-for="Gender" class="text-danger"></span>
-                </div>
-
-                @* <div class="form-group">
-                <label asp-for="Input.MobileNo"></label>
-                <input asp-for="Input.MobileNo" class="form-control" />
-                <span asp-validation-for="Input.MobileNo" class="text-danger"></span>
-                </div> *@
+                </div>              
                 <div class="form-group">
                     <label asp-for="address"></label>
                     <input asp-for="address" class="form-control" />
@@ -54,12 +48,12 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Password"></label>
-                    <input asp-for="Password" class="form-control" />
+                    <input asp-for="Password" type="password" class="form-control" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="ConformPassword"></label>
-                    <input asp-for="ConformPassword" class="form-control" />
+                    <input asp-for="ConformPassword" type="password" class="form-control" />
                     <span asp-validation-for="ConformPassword" class="text-danger"></span>
                 </div>
 
@@ -68,43 +62,15 @@
                     <select asp-for="UserRole" class="form-control" asp-items="ViewBag.Name">
                      <option value="">-- Select Role --</option>
                     </select>
-    </div>
+                    <span asp-validation-for="UserRole" class="text-danger"></span>
+                 </div>
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>
         </div>
     </div>
     <br />
     <br />
-    @* <div class="col-md-6 col-md-offset-2">
-    <section>
-    <h4>Use another service to register.</h4>
-    <hr />
-    @{
-    if ((Model.ExternalLogins?.Count ?? 0) == 0)
-    {
-    <div>
-    <p>
-    There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-    for details on setting up this ASP.NET application to support logging in via external services.
-    </p>
-    </div>
-    }
-    else
-    {
-    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-    <div>
-    <p>
-    @foreach (var provider in Model.ExternalLogins)
-    {
-    <button type="submit" class="btn btn-default" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-    }
-    </p>
-    </div>
-    </form>
-    }
-    }
-    </section>
-    </div> *@
+
 </div>
 
 @section Scripts {

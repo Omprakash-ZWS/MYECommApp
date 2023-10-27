@@ -63,7 +63,6 @@ namespace EcommerceApplication.Controllers
         {
             return View();
         }
-
         // GET: UserController/RegisterUser
         public ActionResult RegisterUser()
         {
@@ -106,15 +105,10 @@ namespace EcommerceApplication.Controllers
                     //    UserName = registerDto.Email
                     //};
                     await _userManager.AddToRoleAsync(user, registerDto.UserRole);                    
-                    ViewBag.Name = _roleManager.Roles.ToList();
-                    
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-
-
                     var callbackUrl = Url.Action(nameof(ConfirmEmail), "User", new { code, Email = user.Email }, Request.Scheme);
                     var message = new Message(new string[] { user.Email! }, "Confirmation email link", callbackUrl!);
-
                     await _emailService.SendEmail(message);
                     return RedirectToAction("SendTokenMessage");
                 }
@@ -123,8 +117,10 @@ namespace EcommerceApplication.Controllers
                     return NotFound();
                 }
             }
-            else {
-              return RedirectToAction("RegisterUser"); }
+            else 
+            {
+              return RedirectToAction("RegisterUser"); 
+            }
         }
 
 
@@ -241,8 +237,8 @@ namespace EcommerceApplication.Controllers
                 ModelState.AddModelError(nameof(loginDto.Email), "Email is unconfirmed, please confirm it first");
                 return View();
             }
-
-            if (ModelState.IsValid && (await _signInManager.PasswordSignInAsync(loginDto.Email, loginDto.Password, loginDto.RememberMe, lockoutOnFailure: false)).Succeeded)
+            var result = await _signInManager.PasswordSignInAsync(loginDto.Email, loginDto.Password, loginDto.RememberMe, lockoutOnFailure: false);
+            if (ModelState.IsValid && result.Succeeded)
             {
                 var token = GenerateJwtToken(user);
                 _httpContextAccessor?.HttpContext?.Response.Cookies.Append("JwtToken", JsonConvert.SerializeObject(token), new CookieOptions
@@ -254,7 +250,10 @@ namespace EcommerceApplication.Controllers
                     Domain = "localhost", // Change this to your actual domain in a production environment
                     Expires = DateTime.UtcNow.AddDays(14)
                 });
-
+                //if (loginDto.RememberMe == false)
+                //{
+                //    _httpContextAccessor?.HttpContext?.Session.Remove(".AspNetCore.Identity.Application");
+                //}
                 if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                 {
                     return Redirect(returnUrl);

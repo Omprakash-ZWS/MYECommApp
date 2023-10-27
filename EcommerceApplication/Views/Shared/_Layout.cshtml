@@ -146,7 +146,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<ul class="navbar-nav flex-grow-1">
 						<li>
 						<a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">
-							Hello @UserManager.GetUserAsync(User).Result.FirstName @UserManager.GetUserAsync(User).Result.LastName!
+							Hello @UserManager.GetUserAsync(User).Result?.FirstName @UserManager.GetUserAsync(User).Result?.LastName
 						</a>
 						</li>
 						<li>
@@ -180,12 +180,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="w3ls-header-right">
 				<ul>
-					<li class="dropdown head-dpdn">
+					<li class="dropdown head-dpdn" id="specialdrop" onmouseover="autoOpen()">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
 						<ul class="dropdown-menu">
 								<li><a asp-controller="User" asp-action="Login">Login </a></li>
 								<li><a asp-controller="User" asp-action="RegisterUser">Sign Up</a></li>
-								<li><a onclick=ChangeRoute();>My Orders</a></li>
+								<li><a onclick="ChangeRoute()">My Orders</a></li>
 							<li><a href="login.html">Wallet</a></li>
 						</ul>
 					</li>
@@ -207,7 +207,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					</li>
 					<li class="dropdown head-dpdn">
 							@* class="caret" *@
-						<a href="contact.html" ><i class="fa fa-map-marker" aria-hidden="true"></i> Store Finder</a>
+							@* href="contact.html" *@
+							<a onclick="window.location.href = '@Url.Action("Contact","Home")'"><i class="fa fa-map-marker" aria-hidden="true"></i> Store Finder</a>
 					</li>
 					<li class="dropdown head-dpdn">
 							@* class="dropdown-toggle" *@
@@ -238,7 +239,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="header-cart">
 					<div class="my-account">
-						<a href="contact.html"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>
+							<a  onclick="window.location.href = '@Url.Action("Contact","Home")'"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>
 					</div>
 					<div class="cart">
 							<form action="/Home/CartProducts" method="get" class="last">
@@ -1193,7 +1194,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		window.location.href = '@Url.Action("CartProducts","Home")'
 	}
 
-
+	function autoOpen() {
+		$("#specialdrop").addClass("open")
+	}
 
 
 </script>

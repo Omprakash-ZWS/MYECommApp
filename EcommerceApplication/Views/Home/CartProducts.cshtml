@@ -5,10 +5,10 @@
 	var finalTotal = 0;
 }
 
-<h2>CartProducts</h2>
+
 
 @* <div> *@
-	<h4>Product</h4>
+	
 
 
 	<!DOCTYPE html>
@@ -22,14 +22,18 @@
 		<!-- card-page -->
 		<div class="card-page">
 			<div class="container">
+			@if (Model.Count() != 0)
+			{
 				<h3 class="w3ls-title w3ls-title1"> Add TO Cart Product & Checkout</h3>
-
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 ftco-animate fadeInUp ftco-animated">
 							<div class="cart-list">
+								
 								<table class="table">
+								
 									<thead class="thead-primary">
+										
 										<tr class="text-center">
 											<th>Images</th>
 											
@@ -41,19 +45,24 @@
 										     <th></th>
 										</tr>
 									</thead>
-									<tbody>								
-									@foreach (var item in Model)
+								
+								
+								<tbody>	
+									
+									
+										@foreach (var item in Model)
 										{
-										<tr>
-											<td>	
-												@if (item.Images != null && item.Images.Split(',').Any())
-											    {
-													<img src="~/product/images/@item.Images.Split(',')[0]" alt="img" width="185" height="150" />
-												}else
-												{
-													<img src="~/product/images/a3.png" alt="img" width="50" height="50" />
-												}
-											</td>
+											<tr>
+												<td>	
+													@if (item.Images != null && item.Images.Split(',').Any())
+													{
+														<img src="~/product/images/@item.Images.Split(',')[0]" alt="img" width="185" height="150" />
+													}
+													else
+													{
+														<img src="~/product/images/a3.png" alt="img" width="50" height="50" />
+													}
+												</td>
 
 												@* <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td> *@
 												<td><h3>@item.ProductId</h3></td>
@@ -70,31 +79,31 @@
 												</td>
 												<td id="total_@item.ProductId" class="product-name"><h3>@item.Total</h3></td>
 												<td><i class="fa fa-times" onclick="DeleteCart(@item.ProductId)" value="Delete cart"></i></td>
-												</tr>
-												finalTotal += item.Total;											
-											}										
-									</tbody>								
-									<tfoot>
-										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td>
-												<h3>Total :-</h3>
-											</td>
+											</tr>
+											finalTotal += item.Total;
+										}
 
-										<td id="finalTotal"  class="product-name">@finalTotal</td>
+										</tbody>								
+										<tfoot>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>
+													<h3>Total :-</h3>
+												</td>
 
-											<td>
-											<a type="submit" id="chekout" class="btn btn-primary" asp-action="Checkout" asp-route-finalPrice="@finalTotal" asp-route-id="" value="Submit">Proceed To Checkout</a>
+												<td id="finalTotal"  class="product-name">@finalTotal</td>
 
-											</td>
-										</tr>
-									</tfoot>
-									
-								</table>
+												<td>
+													<a type="submit" id="chekout" class="btn btn-primary" asp-action="Checkout" asp-route-finalPrice="@finalTotal" asp-route-id="" value="Submit">Proceed To Checkout</a>
 
+												</td>
+											</tr>
+										</tfoot>
+							
+							</table>								
 
 							</div>
 						</div>
@@ -129,7 +138,13 @@
 					<h5>Special account openings</h5>
 					<p>Nulla sodales nulla et ipsum pharetra pharetra. Suspendisse potenti. Phasellus cursus vehicula lorem, nec dignissim orci cursus tempor. Suspendisse vel ullamcorper arcu. Mauris tellus augue, tristique ut varius ac, scelerisque ac urna. Mauris nibh ligula, cursus eu vehicula a, scelerisque a nunc. Mauris sit amet sem orci. Proin sit amet tortor non massa tincidunt faucibus. Sed a lacus a purus congue dignissim. Maecenas auctor urna et ullamcorper sagittis. Aenean semper, nisi sed vulputate euismod, justo odio dictum lorem, a mattis ipsum magna non quam.<br>  Maecenas faucibus ipsum et libero euismod iaculis. Integer consectetur congue laoreet. Morbi eget leo elementum, vulputate eros et, egestas diam. Nam egestas, quam id viverra congue, elit mi eleifend libero, eget vulputate ante lorem vel quam. Sed suscipit ligula eu mi bibendum, vel mollis enim finibus. Suspendisse vitae est tortor. Donec aliquet leo vitae ligula mattis, vitae auctor mi pellentesque. Integer eu dui accumsan, convallis neque id, malesuada urna. </p>
 				</div>
-			</div>
+			
+			}	
+		else
+		{
+		<h1 class="text-center" style="color: red;">Your Cart Is Empty.</h1>
+		}
+		</div>
 		</div>
 		<!-- //card-page -->
 		<!-- footer-top -->
@@ -338,6 +353,9 @@
 				type: 'GET',					
 				url: "/Home/DeleteCart?productId=" + parseInt(productId),
 				contentType: 'application/json; charset=utf-8',
+				success: function (res) {
+					window.location.reload();
+				}
 				
 			});
 		}

@@ -7,9 +7,9 @@
     Layout = null;
 }
 
-<h2>Checkout</h2>   
-    
-    <html lang="en">
+@* <h2 style="text-align:center">Checkout</h2> *@
+
+<html lang="en">
     <head>
         <link href="~/lib/bootstrap/dist/css/checkout.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -94,18 +94,20 @@
                                                     <div class="form-group">
                                                         <label asp-for="FirstName" class="control-label"></label>
                                                         <input asp-for="FirstName" id="txtfname" class="form-control" placeholder="FirstName" />
-                                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                                        @* <span asp-validation-for="FirstName" class="text-danger"></span> *@
+                                                        <span id="NameCheck" class="text-danger">The Firstname is Required....</span>
                                                     </div>
 
                                                     
                                                     <label asp-for="MiddleName" class="control-label"> Middlename: </label>
                                                     <input asp-for="MiddleName" id="txtmname" type="text" name="Middlename" placeholder="Middlename" class="form-control" size="15" required />
-                                                    <span asp-validation-for="MiddleName" class="text-danger"></span>
-
+                                                    @* <span asp-validation-for="MiddleName" class="text-danger"></span> *@
+                                                    
                                                     
                                                     <label asp-for="LastName" class="control-label"> Lastname: </label>
                                                     <input asp-for="LastName" type="text" id="txtlname" name="LastName" placeholder="Lastname" class="form-control" size="15" required />
-                                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                                    @* <span asp-validation-for="LastName" class="text-danger"></span> *@
+                                                    <span id="LastNameCheck" class="text-danger">The Lastname is Required....</span>
                                                     <div>
                                                             <label class="control-label">
                                                                 Gender :
@@ -119,18 +121,29 @@
                                                         </label>
                                                         <input class="form-control" type="text" name="country code" placeholder="Country Code" value="+91" size="2" />
                                                         <input class="form-control" type="text" id="phoneNo"name="phone" placeholder="phone no." size="10" / required>
+                                                    <span id="PhoneNoCheck" class="text-danger">The Phone No. is Required....</span>
+                                                    <br/>
                                                         <label class="control-label">
                                                             Current Address :
                                                         </label>
                                                         <textarea cols="80" rows="5" id="txtAddress" placeholder="Current Address" class="form-control" value="address" required>  
                                                         </textarea>
+                                                    <span id="addressCheck" class="text-danger">The Address is Required....</span>
+                                                    <br/>
                                                         <label for="email" class="control-label"><b>Email</b></label>
                                                         <input type="text" id="txtemail" placeholder="Enter Email" name="email" class="form-control" required>
+                                                    <small id="emailvalid" class="text-danger text-muted invalid-feedback">
+                                                        Your email must be a valid email
+                                                    </small>
                                                         <label class="control-label" for="psw"><b>Password</b></label>
                                                         <input type="password" id="txtpassword" placeholder="Enter Password" class="form-control" name="psw" required>
+                                                    <span id="PasswordCheck" class="text-danger">The Password is Required....</span>
+                                                    <br/>
                                                         <label for="psw-repeat" class="control-label"><b>Re-type Password</b></label>
                                                     <input type="password" id="txtcpassword"  placeholder="Retype Password" name="psw-repeat" class="form-control" required>
-                                                    @* 			<button type="submit" class="btn btn-primary">Register</button> *@
+                                                    <span id="ConPasswordCheck" class="text-danger">The ConfirmPassword is Required....</span>
+                                                    <br/>
+                                                    @*<button type="submit" class="btn btn-primary">Register</button>*@
                                                         <li>
                                                         <a id="add-userdata-save-link" class="btn btn-primary next-step">Next</a>
                                                         </li>
@@ -141,7 +154,7 @@
                                                     <p>This is step 2</p>
                                                     <ul class="list-inline pull-right">
                                                         <div class="row">
-                                                    @*         <div class="col-50">
+                                                              @*<div class="col-50">
                                                                 <h3>Billing Address</h3>
                                                                 <label for="fname"><i class="fa fa-user"></i> Full Name</label>
                                                                 <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
@@ -246,7 +259,7 @@
                                         <tr>
                                             <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
                                             <td>
-                                                <h3>@ViewBag.FinalTotal</h3>
+                                                <h3 display:none>@ViewBag.FinalTotal</h3>
                                             </td>
                                             @*
                                             <td >
@@ -297,12 +310,12 @@
                     </div>
                     <div class="clearfix"> </div>
                 </div>
-                <div class="agile-card-text">
+                @* <div class="agile-card-text">
                     <h5>New User Account Offers</h5>
                     <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas faucibus ipsum et libero euismod iaculis. Integer consectetur congue laoreet. Morbi eget leo elementum, vulputate eros et, egestas diam. Nam egestas, quam id viverra congue, elit mi eleifend libero, eget vulputate ante lorem vel quam. Sed suscipit ligula eu mi bibendum, vel mollis enim finibus. Suspendisse vitae est tortor. Donec aliquet leo vitae ligula mattis, vitae auctor mi pellentesque. Integer eu dui accumsan, convallis neque id, malesuada urna. </p>
                     <h5>Special account openings</h5>
                     <p>Nulla sodales nulla et ipsum pharetra pharetra. Suspendisse potenti. Phasellus cursus vehicula lorem, nec dignissim orci cursus tempor. Suspendisse vel ullamcorper arcu. Mauris tellus augue, tristique ut varius ac, scelerisque ac urna. Mauris nibh ligula, cursus eu vehicula a, scelerisque a nunc. Mauris sit amet sem orci. Proin sit amet tortor non massa tincidunt faucibus. Sed a lacus a purus congue dignissim. Maecenas auctor urna et ullamcorper sagittis. Aenean semper, nisi sed vulputate euismod, justo odio dictum lorem, a mattis ipsum magna non quam.<br>  Maecenas faucibus ipsum et libero euismod iaculis. Integer consectetur congue laoreet. Morbi eget leo elementum, vulputate eros et, egestas diam. Nam egestas, quam id viverra congue, elit mi eleifend libero, eget vulputate ante lorem vel quam. Sed suscipit ligula eu mi bibendum, vel mollis enim finibus. Suspendisse vitae est tortor. Donec aliquet leo vitae ligula mattis, vitae auctor mi pellentesque. Integer eu dui accumsan, convallis neque id, malesuada urna. </p>
-                </div>
+                </div> *@
             </div>
         </div>
         <!-- //card-page -->
@@ -439,8 +452,7 @@
         <!-- cart-js -->
         <script src="~/js/minicart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    @* <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.js"></script> *@
-      
+    @* <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.js"></script> *@    
     
     <script>
         w3ls.render();
@@ -454,6 +466,237 @@
                 }
             }
         });
+
+        // Document is ready
+        $(document).ready(function () {
+
+            // Validate Firstname
+            $("#NameCheck").hide();
+            let usernameError = true;           
+            const name = document.getElementById("txtfname");
+            //blur:- which occurs when the input field loses focus (i.e. the user clicks away from it.)
+            name.addEventListener("blur", function () {
+                validateUsername();
+            });
+            // // Validate Lastname
+             $("#LastNameCheck").hide();
+            let lastnameError = true;
+            const lname = document.getElementById("txtlname");
+            //blur:- which occurs when the input field loses focus (i.e. the user clicks away from it.) blur opposite focus
+            lname.addEventListener("blur", function () {
+                validateLastname();
+            });
+            // // Validate Phone No.
+             $("#PhoneNoCheck").hide();
+            let phoneNoError = true;
+            const phoneNo = document.getElementById("phoneNo");
+            phoneNo.addEventListener("blur", function () {
+                validatePhoneNo()
+            });
+            // // Validate Address
+            $("#addressCheck").hide();
+            let AddressError = true;
+            const address = document.getElementById("txtAddress");
+            address.addEventListener("blur", function () {
+                validateAddress()
+            });
+
+            // // Validate Password
+            $("#PasswordCheck").hide();
+            let passwordError = true;
+            const password = document.getElementById("txtpassword");
+            password.addEventListener("blur", function () {
+                validatePassword()
+            });
+
+            // // Validate ConformPassword
+            $("#ConPasswordCheck").hide();
+            let conpasswordError = true;
+            const conpassword = document.getElementById("txtcpassword");
+            conpassword.addEventListener("blur", function () {
+                validateConfirmPassword()
+            });
+            // Validate Function for Firstname
+            function validateUsername() {
+                let usernameValue = $("#txtfname").val();
+                if (usernameValue.length == "") {
+                    $("#NameCheck").show();
+                    usernameError = false;
+                    return false;
+                } else if (usernameValue.length < 3 || usernameValue.length > 10) {
+                    $("#NameCheck").show();
+                    $("#NameCheck").html("**length of firstname must be between 3 and 10");
+                    usernameError = false;
+                    return false;
+                } else {
+                    $("#NameCheck").hide();
+                }
+            }
+            // Validate Function for Firstname
+            function validateLastname() {
+                let lastnameValue = $("#txtlname").val();
+                if (lastnameValue.length == "") {
+                    $("#LastNameCheck").show();
+                    lastnameError = false;
+                    return false;
+                } else if (lastnameValue.length < 3 || lastnameValue.length > 10) {
+                    $("#LastNameCheck").show();
+                    $("#LastNameCheck").html("**length of lastname must be between 3 and 10");
+                    lastnameError = false;
+                    return false;
+                } else {
+                    $("#LastNameCheck").hide();
+                }
+            }
+
+            // Validate Function for Firstname
+            function validatePhoneNo() {
+                let phoneNoValue = $("#phoneNo").val();
+                if (phoneNoValue.length == "") {
+                    $("#PhoneNoCheck").show();
+                    phoneNoError = false;
+                    return false;
+                } else if (phoneNoValue.length > 10) {
+                    $("#PhoneNoCheck").show();
+                    $("#PhoneNoCheck").html("**length of phone no must be 10 digit");
+                    phoneNoError = false;
+                    return false;
+                } else {
+                    $("#PhoneNoCheck").hide();
+                }
+            }
+
+            function validateAddress() {
+                let AddressValue = $("#txtAddress").val();
+                if (AddressValue === null || AddressValue.trim() === '') {
+                   
+                    $("#addressCheck").show();
+                    AddressError = false;
+                    return false;
+                 }
+                //  else if (AddressValue.length < 3 || AddressValue.length > 50) {
+                //     $("#addressCheck").show();
+                //     debugger
+                //     $("#addressCheck").html("**length of Address must be between 3 and 50");
+                //     AddressError = false;
+                //     return false;
+                // } 
+                else {
+                    
+
+                    $("#addressCheck").hide();
+                }
+            }
+            // Validate Email
+            const email = document.getElementById("txtemail");
+            //attaches an event handler to an element without overwriting existing event handlers.
+            //blur:- which occurs when the input field loses focus (i.e. the user clicks away from it.)
+            email.addEventListener("blur", () => {
+                let regex =
+                //we can also use the use utf-8 code instead of at the rate
+        //    /^([\w-\.]+\u0040([\w-]+\.)+[\w-]{2,4})?$/
+                    /^[\w-]+(\.[\w-]+)*@@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+                let s = email.value;
+                if (regex.test(s)) {
+                    email.classList.remove("is-invalid");
+                    emailError = true;
+                } else {
+                    email.classList.add("is-invalid");
+                    emailError = false;
+                }
+            });
+
+            function validatePassword() {
+                let passwordValue = $("#txtpassword").val();
+                if (passwordValue.length == "") {
+                    $("#PasswordCheck").show();
+                    passwordError = false;
+                    return false;
+                }
+                if (passwordValue.length < 3 || passwordValue.length > 10) {
+                    $("#PasswordCheck").show();
+                    $("#PasswordCheck").html(
+                        "**length of your password must be between 3 and 10"
+                    );
+                    $("#PasswordCheck").css("color", "red");
+                    passwordError = false;
+                    return false;
+                } else {
+                    $("#PasswordCheck").hide();
+                }
+            }
+
+            function validateConfirmPassword() {
+                let confirmPasswordValue = $("#txtcpassword").val();
+                let passwordValue = $("#txtpassword").val();
+                if (passwordValue != confirmPasswordValue) {
+                    $("#ConPasswordCheck").show();
+                    $("#ConPasswordCheck").html("**Password didn't Match");
+                    $("#ConPasswordCheck").css("color", "red");
+                    conpasswordError = false;
+                    return false;
+                } else {
+                    $("#ConPasswordCheck").hide();
+                }
+            }
+
+            function validateForm() {
+                // Perform validation checks
+                validateUsername();
+                validateLastname();
+                validatePhoneNo();
+                validateAddress();
+                validatePassword();
+                validateConfirmPassword();
+                if (
+                    usernameError == true &&
+                    lastnameError == true &&
+                    phoneNoError == true &&
+                    AddressError == true &&
+                    passwordError == true &&
+                    conpasswordError == true
+                ) {
+                    debugger
+                    return true;
+                    // e.preventDefault();
+
+                } else {
+                    debugger
+                    return false;
+                    // e.preventDefault();
+                }
+            }
+            
+                $("#add-userdata-save-link").click(function (e) {
+
+                var formvalidation = validateForm()
+                    if (formvalidation == true) {
+                        debugger
+                    var FirstName = $('#txtfname').val();
+                    var MiddleName = $('#txtmname').val();
+                    var LastName = $('#txtlname').val();
+                    var Phone = $('#phoneNo').val();
+                    var Email = $('#txtemail').val();
+                    var Gender = $('input[name="gender"]:checked').val();
+                    var address = $('#txtAddress').val();
+                    var Password = $('#txtpassword').val();
+                    var ConformPassword = $('#txtcpassword').val();
+
+                    var registration = {
+                            FirstName: FirstName,
+                            MiddleName: MiddleName,
+                            LastName: LastName,
+                            Phone: Phone,
+                            Email: Email,
+                            Gender: Gender,
+                            address: address,
+                            Password: Password,
+                        };
+                    $.cookie("UserData", JSON.stringify(registration), { expires: 365 });
+                    } else {
+                    e.preventDefault();
+                    }                    
+                });
 
         function validateCardData() {
 
@@ -477,34 +720,35 @@
         }
 
 
-        function validateInputs() {
-            var FirstName = $('#txtfname').val();
-            var LastName = $('#txtlname').val();
-            var Phone = $('#phoneNo').val();
-            var Email = $('#txtemail').val();
-            var Gender = $('input[name="gender"]:checked').val();
-            var address = $('#txtAddress').val();
-            var Password = $('#txtpassword').val();
-            var ConformPassword = $('#txtcpassword').val();
+        // function validateInputs() {
+        //     var FirstName = $('#txtfname').val();
+        //     var LastName = $('#txtlname').val();
+        //     var Phone = $('#phoneNo').val();
+        //     var Email = $('#txtemail').val();
+        //     var Gender = $('input[name="gender"]:checked').val();
+        //     var address = $('#txtAddress').val();
+        //     var Password = $('#txtpassword').val();
+        //     var ConformPassword = $('#txtcpassword').val();
 
 
-            var inputsToValidate = [FirstName, LastName, Phone, Email, Gender, address, Password, ConformPassword];
-            var flag = 1;
+        //     var inputsToValidate = [FirstName, LastName, Phone, Email, Gender, address, Password, ConformPassword];
+        //     var flag = 1;
 
-            for (var i = 0; i < inputsToValidate.length; i++) {
-                if (inputsToValidate[i] === "") {
-                    flag = 0;
-                    break;
-                }
-            }
+        //     for (var i = 0; i < inputsToValidate.length; i++) {
+        //         if (inputsToValidate[i] === "") {
+        //             flag = 0;
+        //             break;
+        //         }
+        //     }
 
-            return flag;
-        }
-        //Data save to the Cookie And Client Side Validation
+        //     return flag;
+        // }
 
+
+       // Data save to the Cookie And Client Side Validation
         $(document).ready(function () {
             $('#add-userdata-save-link').click(function (e) {
-                e.preventDefault();
+                // e.preventDefault();
                 var FirstName = $('#txtfname').val();
                 var MiddleName = $('#txtmname').val();
                 var LastName = $('#txtlname').val();
@@ -516,62 +760,69 @@
                 var ConformPassword = $('#txtcpassword').val();
                 //Validiate Input Function Called
 
-                var registration = {
-                    FirstName: FirstName,
-                    MiddleName: MiddleName,
-                    LastName: LastName,
-                    Phone: Phone,
-                    Email: Email,
-                    Gender: Gender,
-                    address: address,
-                    Password: Password,
-                };
-                var flag = validateInputs();
-                if (flag == 1) {
-                    registration = JSON.stringify(registration);
-                    var existingUserDataObject = [];
-                    var existingUserData = $.cookie("UserData");
-                    // existingUserData is null
-                    if (existingUserData !== null && typeof existingUserData !== "undefined") {
+                // var registration = {
+                //     FirstName: FirstName,
+                //     MiddleName: MiddleName,
+                //     LastName: LastName,
+                //     Phone: Phone,
+                //     Email: Email,
+                //     Gender: Gender,
+                //     address: address,
+                //     Password: Password,
+                // };
+                // var flag = validateInputs();
+                // if (flag == 1) {
+                //     registration = JSON.stringify(registration);
+                //     var existingUserDataObject = [];
+                //     var existingUserData = $.cookie("UserData");
+                //     // existingUserData is null
+                //     if (existingUserData !== null && typeof existingUserData !== "undefined") {
 
-                        existingUserDataObject.push(existingUserData);
-                        // Add the new registration data to the existing cookie data
-                        existingUserDataObject.push(registration);
-                        alert(existingUserDataObject);
-                        // Update the UserData cookie with the updated data
-                        $.cookie("UserData", existingUserDataObject, { expires: 365 });
-                    }
-                    else {
-                        $.cookie("UserData", registration, { expires: 365 });
-                    }
-                }
+                //         existingUserDataObject.push(existingUserData);
+                //         // Add the new registration data to the existing cookie data
+                //         existingUserDataObject.push(registration);
+                //         alert(existingUserDataObject);
+                //         // Update the UserData cookie with the updated data
+                //         $.cookie("UserData", existingUserDataObject, { expires: 365 });
+                //     }
+                //     else {
+                //         $.cookie("UserData", registration, { expires: 365 });
+                //     }
+                // }
                 //Sending data to controller but here it is not used the controller action action method to save data in database
-                $.ajax({
-                    type: 'POST',
-                    //url:- the whole data is url pass in HomeController of AddToCart action method
-                    url: '/Home/Create',
-                    //type: application/json; charset=utf-8
-                    //designates the content to be in JSON format, encoded in the UTF-8 character encoding.
-                    contentType: 'application/json; charset=utf-8',
-                    //JSON. stringify() Actually converts a JavaScript object into a string
-                    data: JSON.stringify(registration),  // Corrected JSON.stringify placement
+                // $.ajax({
+                //     type: 'POST',
+                //     //url:- the whole data is url pass in HomeController of AddToCart action method
+                //     url: '/Home/Create',
+                //     //type: application/json; charset=utf-8
+                //     //designates the content to be in JSON format, encoded in the UTF-8 character encoding.
+                //     contentType: 'application/json; charset=utf-8',
+                //     //JSON. stringify() Actually converts a JavaScript object into a string
+                //     data: JSON.stringify(registration),  // Corrected JSON.stringify placement
 
-                    success: function (response) {
-                        if (response.success) {
+                //     success: function (response) {
+                //         if (response.success) {
 
-                            alert("User added to Cookie");
-                        } else {
+                //             alert("User added to Cookie");
+                //         } else {
 
-                            alert(response.message);
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('Error adding product to cart:', error);
-                    }
-                });
+                //             alert(response.message);
+                //         }
+                //     },
+                //     error: function (xhr, status, error) {
+                //         console.error('Error adding product to cart:', error);
+                //     }
+                // });
 
 
             });
+
+
+
+
+
+
+
 
             //Add User CardData in the cookie
             // $(document).ready(function () {
@@ -657,27 +908,25 @@
                         $btn_next.on('click', function () {
                             
                             var stepperid = $progressWizard.find('.active')[1].id;
-
+                                
                             if (stepperid === 'stepper-step-1') {
-                                var flag = validateInputs();
-                                if (flag == 1) {
-
-
-
+                                var isFormValid = validateForm();
+                               
+                                // Prevent form submission if the validation fails
+                                if (isFormValid) {         
+                                
                                     $tab_active = $progressWizard.find('.active');
                                     
                                     $tab_active.next().removeClass('disabled');
                                     $tab_next = $tab_active.next().find('a[data-toggle="tab"]');
                                     triggerClick($tab_next);
-                                } else {
-                                    alert("Please Enter The Correct User Details");
-                                }
+                                 } 
 
                             } else if (stepperid === 'stepper-step-2') {
                                 
-                                var Errflag = validateCardData();
+                                // var Errflag = validateCardData();
                                 
-                                if (Errflag === 1) {
+                                // if (Errflag === 1) {
 
                                     var CardName = $('#cname').val();
                                     var CardNo = $('#ccnum').val();
@@ -706,9 +955,9 @@
                                     $tab_active.next().removeClass('disabled');
                                     $tab_next = $tab_active.next().find('a[data-toggle="tab"]');
                                     triggerClick($tab_next);
-                                } else {
-                                    alert("Please Enter The Correct Cart Details");
-                                }
+                                // } else {
+                                //     alert("Please Enter The Correct Cart Details");
+                                // }
                             }
 
 
@@ -731,6 +980,7 @@
 
             }(jQuery, this));
 
+        });
         });
             // <script src="https://code.jquery.com/jquery-3.6.0.min.js" >
         </script>

@@ -115,7 +115,7 @@ namespace EcommerceApplication.Controllers
 			{
 				return Json(new { message = "Product Id Is Null" });
 			}
-			List<CartDto> cartList = JsonConvert.DeserializeObject<List<CartDto>>(cookieValue);
+			List<CartDto> cartList = JsonConvert.DeserializeObject<List<CartDto>>(cookieValue)!;
 			cartList.RemoveAll(item => item.ProductId == productId);
 			CookieOptions options = new CookieOptions
 			{
@@ -146,22 +146,29 @@ namespace EcommerceApplication.Controllers
 
             return View(cart);
         }
-		//for search the product from the database
-		//public IActionResult OnGet(string SearchTerm)
-		//{
-		// var Product = _productRepository.Search(SearchTerm);
-		//	return View(Product);
-		//}
 
-		// GET: UserController/Create
-		//public ActionResult Create()
-		//{
-		//    return View();
-		//}
 
-		// POST: HomeController/Create
-		//[]
-		[HttpPost]
+        public IActionResult OnGet(string SearchTerm)
+        {
+            var Product = _context.products.Where(e => e.ProductName.Contains(SearchTerm))!;
+            return View(Product);
+        }
+        //for search the product from the database
+        //public IActionResult OnGet(string SearchTerm)
+        //{
+        // var Product = _productRepository.Search(SearchTerm);
+        //	return View(Product);
+        //}
+
+        // GET: UserController/Create
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
+
+        // POST: HomeController/Create
+        //[]
+        [HttpPost]
         public IActionResult Create([FromBody] Registration registration)
 			{
             return View();
@@ -172,5 +179,28 @@ namespace EcommerceApplication.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
+		public IActionResult Contact()
+		{
+			return View();
+		}
+
+
+		[HttpPost]
+		public async Task<ActionResult> Contact(Contact model)
+		{
+
+			Contact contact = new Contact();
+			contact.Subject = model.Subject;
+			contact.Body = model.Body;
+			contact.Email = model.Email;
+			contact.Name = model.Name;	
+			
+			//Read SMTP section from Web.Config.			
+			ViewBag.Message = "Email sent sucessfully.";		
+
+			return View();
+		}
 	}
+
+
 }

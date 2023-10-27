@@ -1,19 +1,25 @@
 ﻿using EcommerceApplication.Models;
 using EcommerceApplication.Models.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceApplication.Controllers
 {
+	[Authorize(Roles = "Admin")]
 	public class AdminController : Controller
 	{
 		private RoleManager<IdentityRole> _roleManager;
 		private readonly UserManager<ApplicationUser> _userManager;
+		private readonly SignInManager<ApplicationUser> _signInManager;
 
-		public AdminController(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager)
+		public AdminController(RoleManager<IdentityRole> roleManager,
+			UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
 		{
 			_roleManager = roleManager;
 			_userManager = userManager;
+            _signInManager = signInManager;
 		}
 		public IActionResult Index()
 		{
@@ -51,7 +57,7 @@ namespace EcommerceApplication.Controllers
 		[HttpGet]
 		public IActionResult ListRole()
 		{
-			var roles = _roleManager.Roles;
+			var roles = _roleManager.Roles.ToList();
 			return View(roles);
 		}
 		[HttpGet]
@@ -106,13 +112,13 @@ namespace EcommerceApplication.Controllers
 		[HttpGet]
 		public async Task<IActionResult> EditUsersInRole(string roleId)
 		{
+			
 			ViewBag.roleId = roleId;
 			var role = await _roleManager.FindByIdAsync(roleId);
 			if (role == null)
 			{
 				ViewBag.ErrorMessage = $"Role with Id = {roleId} cannot be found";
 				return View("Error");
-
 			}           
             var model = new List<UserRoleDto>();
 			//get all the data either or admin, user or without role
@@ -145,41 +151,58 @@ namespace EcommerceApplication.Controllers
 			return View(model);
 		}
 		[HttpPost]
-        public async Task<IActionResult> EditUsersInRole(List<UserRoleDto> model, string roleId)
+		public async Task<IActionResult> EditUsersInRole(List<UserRoleDto> model, string roleId)
 		{
-
+            var checksignin = false;
             var role = await _roleManager.FindByIdAsync(roleId);
             if (role == null)
             {
                 ViewBag.ErrorMessage = $"Role with Id = {roleId} cannot be found";
-                return View("Error");
-
+                View("Error");
             }
-			for (int i = 0; i < model.Count; i++)
-			{
-				var user = await _userManager.FindByIdAsync(model[i].UserId);
-				IdentityResult result = null;
-                if (model[i].Isselected && !(await _userManager.IsInRoleAsync(user, role.Name)))
-                {
-                   result = await _userManager.AddToRoleAsync(user, role.Name);
-                }else if (!model[i].Isselected && await _userManager.IsInRoleAsync(user, role.Name))
-                {
-                    result = await _userManager.RemoveFromRoleAsync(user, role.Name);
+
+            for (int i = 0; i < model.Count; i++)
+            {
+                var user = await _userManager.FindByIdAsync(model[i].UserId);
+                IdentityResult result = null!;
+
+				if (model[i].Isselected && !(await _userManager.IsInRoleAsync(user!, role!.Name!)))
+				{
+					result = await _userManager.AddToRoleAsync(user!, role.Name!);
+				}
+				else if (!model[i].Isselected && await _userManager.IsInRoleAsync(user!, role!.Name!))
+				{
+					result = await _userManager.RemoveFromRoleAsync(user!, role.Name!);
+
+					if (User.Identity!.IsAuthenticated)
+					{
+						await _signInManager.SignOutAsync();
+						checksignin = true;
+					}
 				}
 				else
 				{
 					continue;
 				}
-				if(result.Succeeded) 
+				if (result.Succeeded)
 				{
 					if (i < (model.Count - 1))
 						continue;
 					else
 						return RedirectToAction("EditRole", new { Id = roleId });
 				}
+			}
+            var postLogoutRedirectUri = "http://localhost:5079/User/Login";
+            if (checksignin)
+            {
+                // Redirect to the post-logout URL using RedirectResult
+                Response.Redirect(postLogoutRedirectUri);
             }
-
-            return RedirectToAction("EditRole", new { Id = roleId });
+            else
+            {
+                RedirectToAction("EditRole", new { Id = roleId });
+            }
+			return View(model);
         }
 
     }
